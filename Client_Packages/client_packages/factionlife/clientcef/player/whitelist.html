@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1400, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="./css/player.css" />
+		<link rel="stylesheet" href="./css/player-navi.css" />
+	</head>
+<body>	
+	<div class="login content-wrapper content-wrapper anim">
+			<div class="ctx-header">
+				<div class="content-head content-dark">
+					<p class="headline font-heebo">Nun zu unseren Support</p>
+				</div>
+				<div class="content-navi content-dark line-red-top">
+					<div class="navi-item fuereuch">
+						<p>
+							Du musst nun zu unseren Support im TS hin!
+						</p>
+					</div>
+				</div>
+				<div class="ctx-item inventory-main">
+					<h3>Folgendes bitte machen</h3>
+					<h5>1. GTA5 beenden</h5> 
+					<h5>2. Warteraum Support im Teamspeak gehen</h5>
+					<h5>3. Nun warten ;)</h5>   
+					<h5>Mit freundlichen Grüßen</h5>
+					<h5>Independence</h5>   
+				</div>
+			</div>
+	</div>
+
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pointing.menu .item').tab();
+			$('.ui.checkbox').checkbox();
+			$('.ui.accordion').accordion();
+			$('.ui.form').form({
+				fields: {
+					user: {
+					  identifier: 'email',
+					  rules: [{
+						  type: 'empty',
+						  prompt: 'Por favor introduza o seu e-mail.'
+						},
+						{
+						  type: 'email',
+						  prompt: 'Por favor insira um endereço de e-mail válido.'
+						}
+					  ]
+					},
+					password: {
+					  identifier: 'password',
+					  rules: [{
+						type: 'empty',
+						prompt: 'Porfavor digite sua senha.'
+					  }]
+					}
+				},
+				onSuccess: SubmitForm
+			});
+		});
+		
+		function SetStatusMessage(msg) {
+			$("#status_msg").text(msg);
+		}
+		
+		function SubmitForm() {
+			SetStatusMessage("Logando..");
+			mp.trigger("loginUser", $("#login_email").val(), $("#login_password").val(), $('.ui.checkbox').checkbox('is checked'));
+			return true;
+		}
+		
+		function SubmitRegister() {
+			SetStatusMessage("Registrando..");
+			mp.trigger("registerUser", $("#register_user").val(), $("#register_password").val(), $("#register_email").val());
+			return true;
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1300, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="./css/player.css" />
+		<link rel="stylesheet" href="./css/player-navi.css" />		
+		
+		<style type="text/css">
+			.help-main {
+				max-height: 500px;
+				width: 600px;
+				overflow-y: auto;
+				overflow-x: hidden;
+			}.header {
+				font-size: 1.3em !important;
+			}.help-sub p {
+				font-size: 1.2em;
+			}.help-sub ul {
+				font-size: 1.2em !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="content-wrapper content-wrapper anim">
+		
+			<div class="ui stacked segments">
+				
+				<div class="ctx-header">
+				<div class="content-head content-dark">
+					<p class="headline font-heebo">Ihre Fahrzeuge</p>
+				</div>				
+				</div>		
+				<div class="ctx-item inventory-main">
+				<div class="content-navi content-dark line-red-top">
+					<div class="navi-item">
+						<a>Sie besaßen <span id="p_vehicle_count">5</span> Fahrzeuge bei der ACLS Garage!</a>
+					</div>
+				</div>				
+					<table class="ui definition table" id="contracts">
+						<thead>
+							<tr>
+								<th class="single line" width="10px;"></th>
+								<th class=""><center>Modell</th>
+								<th class=""><center>Preisspanne</th>
+
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="release_vehicle_list">
+						</tbody>
+					</table>
+				</div>
+				<div class="content-close content-dark">
+					<center>
+					<div class="fluid positive ui button" id="close" style="background: rgba(0,0,0,0.8);">
+						Schliessen
+					</div>
+					</center>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+
+			$(document).ready(function() {
+				$("#close").click(function() {
+					mp.trigger("Destroy_Character_Menu");
+				});
+
+			});
+			
+			function LoadPlayerVehiclesToRelease(vehicle_list) {
+				vehicles_count = 0;
+				// Vehicles From Stock
+				$("#release_vehicle_list").empty();
+				veh_list = JSON.parse(vehicle_list);
+				if(veh_list.length <= 0) {
+					$('#release_vehicle_list').append("");
+				} else {
+					for(let i = 0; i < veh_list.length; i++) {
+						
+						$('#release_vehicle_list').append('<tr><td class="single line"><h2 class="ui center aligned header">'+veh_list[i].Model+'</h2></td><td><center><a class="ui red label">$'+veh_list[i].Price+'</a></td><td><button id="release_'+veh_list[i].Index+'" class="fluid ui green button">Jetzt kaufen</button></td></tr>');
+						
+						$("#release_" + veh_list[i].Index).click(function() {
+							mp.trigger("Player_Vehicle_Release", veh_list[i].Index, veh_list[i].Price);
+						});
+						vehicles_count++;
+					}
+				}
+				
+				document.getElementById("p_vehicle_count").innerHTML = vehicles_count;
+				
+			}
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,200 @@
+@font-face {
+    font-family: ChaletLondon;
+    src: url('../../fonts/coolvetica.ttf');
+}
+#chat,#chat input#chat_msg{
+    color:#fff
+}
+body{
+    margin:0 0 0 5px;
+	-webkit-user-select: none;
+	overflow: hidden;
+	pointer-events: none;
+}
+#chat{
+    width: 100%;
+    line-height:24px;
+    letter-spacing:.4px;
+	overflow: hidden;
+    user-select:none
+}
+@media screen and (min-height:166.9242658423493vh){
+    #chat{
+        font-size:18px!important;
+        font-weight:700
+    }
+}
+#chat ul#chat_messages{
+    font-family: ChaletLondon;
+    height:240px;
+    padding:10px 0 0;
+    margin:3px 0 0;
+    width:45%;
+    position: relative;
+    overflow: hidden;
+    min-height:2vh;
+    font-size:17px;
+    word-wrap:break-word;
+    overflow: overlay;
+    direction:rtl;
+}
+.time {
+    font-size: 16px;
+    line-height: 25px;
+	width: 100px;
+    height: 25px;
+    color: rgb(174, 174, 174);
+    margin: 0 7px 0 10px;
+    grid-area: time;
+    text-align: center;
+    text-shadow:0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+}
+.name {
+    font-size: 17px;
+    text-shadow:0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+    grid-area: name;
+    text-align: right;
+	margin-left: 45px;
+}
+.msg {
+    margin-left: 0px;
+    color:rgb(255, 255, 255);
+    text-shadow:0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+    grid-area: message;
+}
+#chat input#chat_msg{
+    display: none;
+    margin-top:5px;
+    background:rgba(0,0,0,.5);
+    outline:0;
+    border:none;
+    font-size:13px;
+    line-height:20px;
+    width:45%;
+    padding:5px 5px 5px 15px
+}
+#chat_channels li{
+    float:left;
+    border:.1545595054095827vh solid #000;
+    list-style-type:none;
+    padding:5px 15px;
+    margin:7px 7px 0 0;
+    text-transform:uppercase;
+    font-size:13px;
+    text-shadow:none
+}
+#chat_channels li#active{
+    color:#a545a5
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5);
+    /*border-radius: 4px;
+    width: 8px;
+    height: 8px;*/
+}
+
+#chat ul#chat_messages>li{
+    list-style-type:none;
+    direction:ltr;
+    text-align:left;
+    padding: 0 5px 0 0;
+    margin: 3px 0 3px 10px;
+    grid-template-columns: 55px auto 1fr;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:"time name message"
+}
+
+#chat {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+    color: white;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    margin-left: 10px;
+    user-select: none;
+}
+
+@media screen and (min-height: 1080px) {
+    #chat {
+        font-size: 18px !important;
+    }
+}
+
+#chat ul#chat_messages {
+    height: 160px;
+    padding: 0 0.5vh 0 0.5vh;
+    width: 40%;
+    min-height: 2vh;
+    font-size: 1.4vh;
+    word-wrap: break-word;
+    /*transform: rotate(-180deg);*/
+    font-family: Arial, sans-serif;
+    text-shadow: 0px 0px 2px black,0px 0px 2px black,0px 0px 2px black,0px 0px 2px black;
+    overflow-y: scroll;
+}
+
+    #chat ul#chat_messages > li {
+        /*transform: rotate(-180deg);*/
+        list-style-type: none;
+    }
+
+#chat input#chat_msg {
+    color: white;
+    background: rgba(0,0,0,0.5);
+    outline: none;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    width: 25vw;
+    padding: 5px 5px 5px 15px;
+}
+
+#chat_channels li {
+    float: left;
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 5px 15px;
+    margin: 5px 5px 0px 0px;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-shadow: none;
+}
+
+    #chat_channels li#active {
+        color: rgb(165,69,165);
+    }
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+

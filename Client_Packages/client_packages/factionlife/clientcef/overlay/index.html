@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link href="./css/hud.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/nifty.min.css" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+		<style>
+			* {
+			border-radius: 0px!important;
+			}
+			body {
+			background-color: rgba(77,77,77,0);
+			font-family: 'Fjalla One', sans-serif;
+			user-select: none;
+			overflow:hidden;
+			width:90%;margin:auto;min-width:600px;max-width:2000px;
+			user-select:none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			}
+			         .font-big {
+         font-size: 13px;
+         }
+         .pad-all {
+         padding: 1px 5px;
+         }
+			@font-face {
+			font-family: Coolvetica;
+			src: url('../fonts/coolvetica.ttf');
+			}
+			@font-face {
+			font-family: Pricedown;
+			src: url('../fonts/pricedown.ttf');
+			}
+			@font-face {
+			font-family: HouseScript;
+			src: url('../fonts/housescript.woff2');
+			}
+			.logo-text {
+			font-size: 20px;
+			font-family: Pricedown;
+			color: #fff;
+			text-align: center;
+			text-shadow:0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000;
+			opacity: 0.5;
+			}
+			#logo {
+			margin-left: auto;
+			margin-right: auto;
+			margin-left: 10%;
+			display: block;
+			}
+			#logo img {
+			width: 50px;
+			height: 50px;
+			animation-name: animationBeat;
+			animation-duration: 0.85s;
+			animation-iteration-count: infinite;
+			opacity: 0.7;
+			}
+			@keyframes animationBeat {
+			0%   {transform: scale(1); filter:brightness(1);}
+			50%  {transform: scale(1.03); filter:brightness(1.2);}
+			100%   {transform: scale(1); filter:brightness(1);}
+			}
+			@keyframes animationBeat2 {
+			0%   {transform: scale(1); filter:brightness(1);}
+			50%  {transform: scale(1.03); filter:brightness(1.2);}
+			100%   {transform: scale(1); filter:brightness(1);}
+			}			
+			.rainbow {
+			/* Font options */
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			/* Chrome, Safari, Opera */
+			-webkit-animation: rainbow 3s infinite; 
+			/* Internet Explorer */
+			-ms-animation: rainbow 3s infinite;
+			/* Standar Syntax */
+			animation: rainbow 3s infinite; 
+			}
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes rainbow{
+			0%{color: orange;}	
+			10%{color: purple;}	
+			20%{color: red;}
+			30%{color: CadetBlue;}
+			40%{color: yellow;}
+			50%{color: coral;}
+			60%{color: green;}
+			70%{color: cyan;}
+			80%{color: DeepPink;}
+			90%{color: DodgerBlue;}
+			100%{color: orange;}
+			}
+			/* Internet Explorer */
+			@-ms-keyframes rainbow{
+			0%{color: orange;}	
+			10%{color: purple;}	
+			20%{color: red;}
+			40%{color: yellow;}
+			60%{color: green;}
+			100%{color: orange;}
+			}
+			/* Standar Syntax */
+			@keyframes rainbow{
+			0%{color: orange;}	
+			10%{color: purple;}	
+			20%{color: red;}
+			40%{color: yellow;}
+			60%{color: green;}
+			100%{color: orange;}
+			}
+
+			#hud{
+				position: absolute;
+				right: 10px;
+				top: 70px;
+			}
+
+			.icon4 {
+				color: #fff;
+				width: 1vw;
+				position: absolute;
+				left: 0.2vw;
+				top: 0.34vw;
+			}			
+#microphone img{
+    position: absolute;
+    margin: 2px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    left: 15.5vw;
+    bottom: 1vh;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+		</style>
+	</head>
+<body>
+	   <div id="foo" unselectable="on" class="unselectable">
+		<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" style="padding-top: 300px;">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content card">
+					<div class="modal-header">
+						<h4 class="title"><span class="text-primary" id="defaultModalLabel"> </span></h4>
+					</div>
+					<div class="modal-body">
+						<font color="black" id="modal_text"></font>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary  waves-effect" id="bottom_confirm" onclick="ModalConfirm();"></button>
+						<button type="button" class="btn btn-danger btn-simple  waves-effect" id="bottom_cancel" onclick="ModalCancel();"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div class="boxfood">
+		<div class="inlinefood">
+			<div id="hunger_container" class="infood"></div>
+		</div>
+		<div class="icon5">
+			<i class="fas fa-cookie"></i>
+		</div>
+	</div>
+	
+	<div class="boxdrink">
+		<div class="inlinedrink">
+			<div id="thirsty_container" class="indrink"></div>
+		</div>
+		<div class="icon6">
+			<i class="fas fa-wine-glass-alt"></i>
+		</div>
+	</div>		
+	
+	<script src="index.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/circle-progress.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+	<script>
+			// progressbar.js@1.0.0 version is used
+			// Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+			let trail = 12;
+			let stroke = 4;
+			var hunger = new ProgressBar.Line(hunger_container, {
+				strokeWidth: 4,
+				easing: 'easeInOut',
+				duration: 1400,
+				color: '#FFEA82',
+				trailColor: '#eee',
+				trailWidth: 1,
+				svgStyle: {width: '100%', height: '100%'},
+				from: {color: '#ED6A5A'},
+				to: {color: '#1cb0fe'},
+				step: (state, bar) => {
+					bar.path.setAttribute('stroke', state.color);
+				}
+			});
+			
+			hunger.animate(1.0);
+			
+			var thirsty = new ProgressBar.Line(thirsty_container, {
+				strokeWidth: 4,
+				easing: 'easeInOut',
+				duration: 1400,
+				color: '#FFEA82',
+				trailColor: '#eee',
+				trailWidth: 1,
+				svgStyle: {width: '100%', height: '100%'},
+				from: {color: '#ED6A5A'},
+				to: {color: '#1cb0fe'},
+				step: (state, bar) => {
+					bar.path.setAttribute('stroke', state.color);
+				}
+			});
+			
+			thirsty.animate(1.0);
+
+			var audioPlayer = null;
+			
+			function playAudio(name, volume) {
+			    audioPlayer = new Audio("../celular/" + name + ".ogg");
+			    audioPlayer.volume = volume;
+			    audioPlayer.play();
+			}
+			
+			function ValueToFloat(value) {
+			    let new_value = 1.0;
+			    switch (value) {
+			        case 0:
+			            new_value = 0.0;
+			            break;
+			        case 1:
+			            new_value = 0.01;
+			            break;
+			        case 2:
+			            new_value = 0.02;
+			            break;
+			        case 3:
+			            new_value = 0.03;
+			            break;
+			        case 4:
+			            new_value = 0.04;
+			            break;
+			        case 5:
+			            new_value = 0.05;
+			            break;
+			        case 6:
+			            new_value = 0.06;
+			            break;
+			        case 7:
+			            new_value = 0.07;
+			            break;
+			        case 8:
+			            new_value = 0.08;
+			            break;
+			        case 9:
+			            new_value = 0.09;
+			            break;
+			        case 10:
+			            new_value = 0.10;
+			            break;
+			        case 11:
+			            new_value = 0.11;
+			            break;
+			        case 12:
+			            new_value = 0.12;
+			            break;
+			        case 13:
+			            new_value = 0.13;
+			            break;
+			        case 14:
+			            new_value = 0.14;
+			            break;
+			        case 15:
+			            new_value = 0.15;
+			            break;
+			        case 16:
+			            new_value = 0.16;
+			            break;
+			        case 17:
+			            new_value = 0.17;
+			            break;
+			        case 18:
+			            new_value = 0.18;
+			            break;
+			        case 19:
+			            new_value = 0.19;
+			            break;
+			        case 20:
+			            new_value = 0.20;
+			            break;
+			        case 21:
+			            new_value = 0.21;
+			            break;
+			        case 22:
+			            new_value = 0.22;
+			            break;
+			        case 23:
+			            new_value = 0.23;
+			            break;
+			        case 24:
+			            new_value = 0.24;
+			            break;
+			        case 25:
+			            new_value = 0.25;
+			            break;
+			        case 26:
+			            new_value = 0.26;
+			            break;
+			        case 27:
+			            new_value = 0.27;
+			            break;
+			        case 28:
+			            new_value = 0.28;
+			            break;
+			        case 29:
+			            new_value = 0.29;
+			            break;
+			        case 30:
+			            new_value = 0.30;
+			            break;
+			        case 31:
+			            new_value = 0.31;
+			            break;
+			        case 32:
+			            new_value = 0.32;
+			            break;
+			        case 33:
+			            new_value = 0.33;
+			            break;
+			        case 34:
+			            new_value = 0.34;
+			            break;
+			        case 35:
+			            new_value = 0.35;
+			            break;
+			        case 36:
+			            new_value = 0.36;
+			            break;
+			        case 37:
+			            new_value = 0.37;
+			            break;
+			        case 38:
+			            new_value = 0.38;
+			            break;
+			        case 39:
+			            new_value = 0.39;
+			            break;
+			        case 40:
+			            new_value = 0.40;
+			            break;
+			        case 41:
+			            new_value = 0.41;
+			            break;
+			        case 42:
+			            new_value = 0.42;
+			            break;
+			        case 43:
+			            new_value = 0.43;
+			            break;
+			        case 44:
+			            new_value = 0.44;
+			            break;
+			        case 45:
+			            new_value = 0.45;
+			            break;
+			        case 46:
+			            new_value = 0.46;
+			            break;
+			        case 47:
+			            new_value = 0.47;
+			            break;
+			        case 48:
+			            new_value = 0.48;
+			            break;
+			        case 49:
+			            new_value = 0.49;
+			            break;
+			        case 50:
+			            new_value = 0.50;
+			            break;
+			        case 51:
+			            new_value = 0.51;
+			            break;
+			        case 52:
+			            new_value = 0.52;
+			            break;
+			        case 53:
+			            new_value = 0.53;
+			            break;
+			        case 54:
+			            new_value = 0.54;
+			            break;
+			        case 55:
+			            new_value = 0.55;
+			            break;
+			        case 56:
+			            new_value = 0.56;
+			            break;
+			        case 57:
+			            new_value = 0.57;
+			            break;
+			        case 58:
+			            new_value = 0.58;
+			            break;
+			        case 59:
+			            new_value = 0.59;
+			            break;
+			        case 60:
+			            new_value = 0.60;
+			            break;
+			        case 61:
+			            new_value = 0.61;
+			            break;
+			        case 62:
+			            new_value = 0.62;
+			            break;
+			        case 63:
+			            new_value = 0.63;
+			            break;
+			        case 64:
+			            new_value = 0.64;
+			            break;
+			        case 65:
+			            new_value = 0.65;
+			            break;
+			        case 66:
+			            new_value = 0.66;
+			            break;
+			        case 67:
+			            new_value = 0.67;
+			            break;
+			        case 68:
+			            new_value = 0.68;
+			            break;
+			        case 69:
+			            new_value = 0.69;
+			            break;
+			        case 70:
+			            new_value = 0.70;
+			            break;
+			        case 71:
+			            new_value = 0.71;
+			            break;
+			        case 72:
+			            new_value = 0.72;
+			            break;
+			        case 73:
+			            new_value = 0.73;
+			            break;
+			        case 74:
+			            new_value = 0.74;
+			            break;
+			        case 75:
+			            new_value = 0.75;
+			            break;
+			        case 76:
+			            new_value = 0.76;
+			            break;
+			        case 77:
+			            new_value = 0.77;
+			            break;
+			        case 78:
+			            new_value = 0.78;
+			            break;
+			        case 79:
+			            new_value = 0.79;
+			            break;
+			        case 80:
+			            new_value = 0.80;
+			            break;
+			        case 81:
+			            new_value = 0.81;
+			            break;
+			        case 82:
+			            new_value = 0.82;
+			            break;
+			        case 83:
+			            new_value = 0.83;
+			            break;
+			        case 84:
+			            new_value = 0.84;
+			            break;
+			        case 85:
+			            new_value = 0.85;
+			            break;
+			        case 86:
+			            new_value = 0.86;
+			            break;
+			        case 87:
+			            new_value = 0.87;
+			            break;
+			        case 88:
+			            new_value = 0.88;
+			            break;
+			        case 89:
+			            new_value = 0.89;
+			            break;
+			        case 90:
+			            new_value = 0.90;
+			            break;
+			        case 91:
+			            new_value = 0.91;
+			            break;
+			        case 92:
+			            new_value = 0.92;
+			            break;
+			        case 93:
+			            new_value = 0.93;
+			            break;
+			        case 94:
+			            new_value = 0.94;
+			            break;
+			        case 95:
+			            new_value = 0.95;
+			            break;
+			        case 96:
+			            new_value = 0.96;
+			            break;
+			        case 97:
+			            new_value = 0.97;
+			            break;
+			        case 98:
+			            new_value = 0.98;
+			            break;
+			        case 99:
+			            new_value = 0.99;
+			            break;
+			        case 100:
+			            new_value = 1.0;
+			            break;
+			    }
+			    return new_value;
+			}
+			
+			function SetPlayerHealth(arrhealth) {
+			    health.stop();
+			    health.animate(ValueToFloat(arrhealth));
+			}
+			
+			function SetPlayerArmor(arrarmor) {
+			    armor.stop();
+			    armor.animate(ValueToFloat(arrarmor));
+			}
+			
+			function SetPlayerVoice(active) {
+			    if (active == false) {
+			        voice.set(0.0);
+			    } else {
+			        voice.set(1.0);
+			    }
+			}
+			
+			function SetPlayerHungerThirsty(arrhunger, arrthirsty) {
+			    hunger.stop();
+			    thirsty.stop();
+			    hunger.animate(ValueToFloat(arrhunger));
+			    thirsty.animate(ValueToFloat(arrthirsty));
+			}
+			
+			function EnableSpeedo(toggle) {
+			    if (toggle == true) {
+			        $('#speedo').show();
+			        $('#fix').hide();
+			    } else {
+			        $('#speedo').hide();
+			        $('#fix').show();
+			
+			    }
+			}
+			
+			function UpdateSpeed(text_speed) {
+			    document.getElementById("text_speed").innerHTML = text_speed;
+			    document.getElementById('speedo_progress').setAttribute("background-color", "#F01666");
+			    document.getElementById('speedo_progress').setAttribute("style", "width:" + text_speed + "%");
+			}
+			
+			function UpdateFuel(fuel) {
+			    document.getElementById("fuel").innerHTML = fuel;
+			}
+			
+			function UpdateKMH(speed_kmh) {
+			    document.getElementById("speed_kmh").innerHTML = speed_kmh;
+			}
+			
+			//ShowModal("1", "41", "1", "Ok", "Cancelar");
+			var callback = null;
+			
+			function ShowModal(callback_id, title, text, bottom_confirm, bottom_cancel) {
+			    $('#defaultModal').modal('show');
+			    document.getElementById("modal_text").innerHTML = text;
+			    document.getElementById("defaultModalLabel").innerHTML = title;
+			    document.getElementById("bottom_confirm").innerHTML = bottom_confirm;
+			    document.getElementById("bottom_cancel").innerHTML = bottom_cancel;
+			    callback = callback_id;
+			}
+			
+			function ModalConfirm() {
+			    $('#defaultModal').modal('hide');
+			
+			    mp.trigger("modalConfirm", callback);
+			}
+			
+			function ModalCancel() {
+			    $('#defaultModal').modal('hide');
+			
+			    mp.trigger("modalCancel", callback);
+			}
+	</script>
+	</body>
+</html>

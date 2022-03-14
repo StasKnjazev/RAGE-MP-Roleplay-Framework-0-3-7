@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Copyright © 2019 DerStr1k3r. All rights reserved. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1400, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			body {
+				background-color: rgba(0,0,0,0);
+			}
+		</style>
+	</head>
+	<body id="phone_sms_sended">
+	
+
+		<audio id="phone_sms_send" volume="0.10" autoplay>
+			<source type="audio/ogg" src="http://derstr1k3r.de/cdn/client/phone/sms_send.ogg"/>
+		</audio>
+	
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+		
+			let item_index = -1;
+			$(document).ready(function() {		
+				$("#phone_sms_send").click(function() {
+					mp.trigger("Phone_SMS_send");
+				});
+				$("#phone_sms_sended").click(function() {
+					mp.trigger("Destroy_Phone_SMS_send");
+				});					
+			});
+
+		</script>
+
+	</body>
+	
+</html>

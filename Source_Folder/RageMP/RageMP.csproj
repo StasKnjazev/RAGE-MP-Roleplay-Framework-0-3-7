@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+<PropertyGroup>
+<TargetFramework>netcoreapp2.2</TargetFramework>
+    <RuntimeFrameworkVersion>2.0.7</RuntimeFrameworkVersion>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\RAGEMP\server-files\bridge\resources\empire\Backup1\</UpgradeBackupLocation>
+<OldToolsVersion>2.0</OldToolsVersion>
+<Version>6.6</Version>
+<Copyright>© DerStr1k3r.de. All rights reserved.</Copyright>
+<AssemblyName>Independence</AssemblyName>
+<RootNamespace>Independence</RootNamespace>
+<LangVersion>8.0</LangVersion>
+<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+	<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+	<PackageId>Independence</PackageId>
+	<Authors>DerStr1k3r</Authors>
+	<Company>DerStr1k3r.de</Company>
+	<Product>RP Framework</Product>
+	<AssemblyVersion>6.6.0.0</AssemblyVersion>
+</PropertyGroup>
+<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <OutputPath>bin\Debug\</OutputPath>
+  <Optimize>false</Optimize>
+  <DocumentationFile></DocumentationFile>
+  <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  <DebugType>portable</DebugType>
+  <DebugSymbols>true</DebugSymbols>
+  <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  <WarningsAsErrors />
+  <PlatformTarget>AnyCPU</PlatformTarget>
+</PropertyGroup>
+<ItemGroup>
+  <Compile Remove="Farming\**" />
+  <Compile Remove="login\**" />
+  <Compile Remove="Service\TsQuery\**" />
+  <Compile Remove="Service\Voice\TsQuery\**" />
+  <Compile Remove="Service\Voice\TSVoice\**" />
+  <EmbeddedResource Remove="Farming\**" />
+  <EmbeddedResource Remove="login\**" />
+  <EmbeddedResource Remove="Service\TsQuery\**" />
+  <EmbeddedResource Remove="Service\Voice\TsQuery\**" />
+  <EmbeddedResource Remove="Service\Voice\TSVoice\**" />
+  <None Remove="Farming\**" />
+  <None Remove="login\**" />
+  <None Remove="Service\TsQuery\**" />
+  <None Remove="Service\Voice\TsQuery\**" />
+  <None Remove="Service\Voice\TSVoice\**" />
+</ItemGroup>
+<ItemGroup>
+  <Compile Remove="Service\Jobs\Crafting\C4Crafting.cs" />
+  <Compile Remove="Service\Jobs\Crafting\DrillCrafting.cs" />
+  <Compile Remove="Service\Jobs\Crafting\SecreatWeaponCrafting.cs" />
+  <Compile Remove="Service\Jobs\Crafting\WeaponCrafting.cs" />
+  <Compile Remove="Deposit.cs" />
+  <Compile Remove="Service\GUI\Dashboard.cs" />
+  <Compile Remove="Hunting.cs" />
+  <Compile Remove="PingCheck.cs" />
+  <Compile Remove="Service\AfkManager.cs" />
+  <Compile Remove="Service\DoorState.cs" />
+  <Compile Remove="Service\Rathaus.cs" />
+</ItemGroup>
+<ItemGroup>
+  <None Remove="Service\Voice\Voice.rar" />
+</ItemGroup>
+<ItemGroup>
+  <PackageReference Include="MySql.Data" Version="8.0.13" />
+  <PackageReference Include="System.Runtime" Version="4.3.1" />
+</ItemGroup>
+<ItemGroup>
+  <Reference Include="Bootstrapper">
+    <HintPath>..\Bootstrapper.dll</HintPath>
+  </Reference>
+  <Reference Include="MySql.Data">
+    <HintPath>..\..\runtime\MySql.Data.dll</HintPath>
+  </Reference>
+  <Reference Include="Newtonsoft.Json">
+    <HintPath>E:\RAGEMP\dotnet\Newtonsoft.Json.dll</HintPath>
+  </Reference>
+</ItemGroup>
+<ItemGroup>
+  <Folder Include="Service\Jobs\Farming\" />
+</ItemGroup>
+</Project>

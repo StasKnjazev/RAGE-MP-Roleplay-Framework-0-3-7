@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+		<link rel="stylesheet" href="./css/charcreation.css" />
+		<link rel="stylesheet" href="./css/charcreation-navi.css" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style class="text/css">
+		.ui.hiddden.divider {
+			content: "\A";
+		}
+		.setup-label {
+			float: right;
+		}
+		</style>
+	</head>
+
+	<body>
+		<div class="ui one column grid ">
+			<div class="four wide column ">
+				<div style="margin-left:40px;" >
+					<div class="ctx-header">
+						<div class="content-head content-dark">
+							<p class="headline font-heebo" id="title">Charakter Information</p>
+						</div>
+						<form class="ui form ctx-item inventory-main-c">
+							<div class="field">
+								<input type="text" name="first-name" id="creation_forename" placeholder="Vorname">
+							</div>
+							<div class="field">
+								<input type="text" name="last-name" id="creation_surname" placeholder="Nachname">
+							</div>						
+						  	<div class="field">
+							  <div class="ui selection dropdown" id="creation_gender">
+								  <input type="hidden" name="gender">
+								  	<i class="dropdown icon"></i>
+									<div class="default text">Geschlecht</div>
+									<div class="menu">
+										  <div class="item" data-value="1">Mann</div>
+										  <div class="item" data-value="0">Frau</div>
+								  </div>
+							  </div>
+						  </div>
+						  <div class="ui error message"></div>
+					</div>
+
+					<div class="ctx-item inventory-main">
+						<label class="ui center aligned">Vater</label>
+						<div class="setup-label ui black label" id="display-base"></div>
+						<div class="ui teal range" id="range_base"></div>
+						
+						<label class="ui center aligned">Mutter</label>
+						<div class="setup-label ui black label" id="display-base2"></div>
+						<div class="ui teal range" id="range_base2"></div>
+						
+						<label class="ui center aligned">Ähnlichkeit</label>
+						<div class="setup-label ui yellow label"><i class="angle left icon"></i><span style="opacity:00;">----</span>Vater - Mutter<span style="opacity:00;">------</span><i class="angle right icon"></i></div>
+						<div class="ui teal range" id="range_baseblend"></div>
+
+						<label class="ui center aligned">Hautfarbe</label>
+						<div class="setup-label ui yellow label"><i class="angle left icon"></i><span style="opacity:00;">----</span>Vater - Mutter<span style="opacity:00;">------</span><i class="angle right icon"></i></div>
+
+						<div class="ui teal range" id="range_skin"></div>
+
+						<label class="ui center aligned">Augenfarbe</label>
+						<div class="setup-label ui black label" id="display-eyes"></div>
+						<div class="ui teal range" id="range_eyes"></div>
+
+						<label class="ui center aligned">Haar</label>
+						<div class="setup-label ui black label" id="display-hair"></div>
+						<div class="ui teal range" id="range_hair"></div>
+
+						<label class="ui center aligned">Haarfarbe</label>
+						<div class="setup-label ui black label" id="display-haircolor"></div>
+						<div class="ui teal range" id="range_haircolor"></div>
+
+						<label class="ui center aligned">Farbe der Haarlichter</label>
+						<div class="setup-label ui black label" id="display-haircolor2"></div>
+						<div class="ui teal range" id="range_haircolor2"></div>
+
+						<label class="ui center aligned">Augenbrauen</label>
+						<div class="setup-label ui black label" id="display-eyebrows"></div>
+						<div class="ui teal range" id="range_eyebrows"></div>
+
+						<label class="ui center aligned">Bart</label>
+						<div class="setup-label ui black label" id="display-beard"></div>
+						<div class="ui teal range" id="range_beard"></div>
+					</div>
+
+					<div class="ui two bottom attached buttons" style="background: rgba(0,0,0,0.8);">
+						<div class="ui fluid positive ui button left" id="charcreation_back">Zurück</div>
+						<div class="ui fluid positive ui button right" id="charcreation_next">Weiter</div>
+					</div>
+				</div>
+			</div>
+				<div class="right floated two wide column" style="margin-right:30px;">
+				<div class="ui segments">
+				<div class="content-head content-dark">
+					<p class="headline font-heebo">Rotation</p>
+				</div>
+					<div class="ui bottom center aligned attached segment">
+						<div class="ui teal range" id="range_rotation"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+		<script>
+		$('#creation_gender').dropdown({
+			onChange: function(val, data) { OnRangeChange("range_gender", val, data) }
+		});
+		$(document).ready(function() {
+			$('.ui.form').form({
+				fields: 
+				{
+					firstname: {
+						identifier: 'first-name',
+						rules: [{
+							type: 'empty',
+							prompt: 'Please enter a first name!'
+						}]
+					},
+					lastname: {
+						identifier: 'last-name',
+						rules: [{
+							type: 'empty',
+							prompt: 'Please enter a last name!'
+						}]
+					},			
+					sex: {
+						identifier: 'gender',
+						rules: [{
+							type: 'minCount[1]',
+							prompt: 'Please select at least one gender!'
+						}]
+					}
+				}
+			});
+			
+			$("#charcreation_back").click(function() {
+				mp.trigger("ClientCharCreationBack");
+			});
+			
+			$("#charcreation_next").click(function() {
+				mp.trigger("ClientCharCreationNext", $("#creation_forename").val(), $("#creation_surname").val());
+			});
+
+			$("#charcreation_head").click(function() {
+				mp.trigger("cameraPointTo", 1);
+			});
+			
+			$("#charcreation_body").click(function() {
+				mp.trigger("cameraPointTo", 0);
+			});
+		});
+		// parseFloat(val.toFixed(1))
+		function LoadNewCharacter(arr_data) {
+			
+			let data = JSON.parse(arr_data);
+			$("#creation_forename").val(data[0].Forename);
+			$("#creation_surname").val(data[0].Surname);
+			$('#creation_gender').dropdown('set selected', data[0].Gender);
+
+			$('#range_base').range({
+				min: 0,
+				max: 22,
+				start: data[0].Base,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_base", val, data), $('#display-base').html(val) }
+			});
+			$('#range_base2').range({
+				min: 0,
+				max: 24,
+				start: data[0].Base2,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_base2", val, data), $('#display-base2').html(val) }
+			});
+			$('#range_baseblend').range({
+				min: 0,
+				max: 9,
+				start: data[0].BaseBlend,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_baseblend", val, data) }
+			});
+			$('#range_skin').range({
+				min: 0,
+				max: 9,
+				start: data[0].Skin,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_skin", val, data), $('#display-skin').html(val) }
+			});
+			$('#range_eyes').range({
+				min: 0,
+				max: 6,
+				start: data[0].Eyes,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_eyes", val, data), $('#display-eyes').html(val) }
+			});
+			$('#range_hair').range({
+				min: 0,
+				max: 72,
+				start: data[0].Hair,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_hair", val, data), $('#display-hair').html(val) }
+			});
+			$('#range_haircolor').range({
+				min: 0,
+				max: 63,
+				start: data[0].HairColor,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_haircolor", val, data), $('#display-haircolor').html(val) }
+			});
+			$('#range_haircolor2').range({
+				min: 0,
+				max: 63,
+				start: data[0].HairHighlightColor,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_haircolor2", val, data), $('#display-haircolor2').html(val) }
+			});
+			$('#range_eyebrows').range({
+				min: 0,
+				max: 31,
+				start: data[0].Eyebrows,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_eyebrows", val, data), $('#display-eyebrows').html(val) }
+			});
+			$('#range_beard').range({
+				min: 0,
+				max: 28,
+				start: data[0].Beard,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_beard", val, data), $('#display-beard').html(val) }
+			});
+			$('#range_rotation').range({
+				min: 0,
+				max: 360,
+				start: 100,
+				step: 20,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_rotation", val, data) }
+			});
+			$('#range_elevation').range({
+				min: -2,
+				max: 1,
+				start: 0,
+				step: 1,
+				smooth: false,
+				onChange: function(val, data) { OnRangeChange("range_elevation", val, null) }
+			});
+		}
+		
+		function OnRangeChange(id, val, data) {
+			console.log(id, val);
+			mp.trigger("ClientOnRangeChange", id, val);
+		}
+		</script>
+	</body>
+</html>

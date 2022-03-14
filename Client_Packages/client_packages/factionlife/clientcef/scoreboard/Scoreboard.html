@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css"/>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+			body {
+				background: rgba(0,0,0,0);
+			}
+			.ui.header.custom>.image:not(.icon), .ui.header>img {
+				width: 15em;
+				height: 40px;
+				vertical-align: middle;
+			}
+			.playerlist {
+				height: 500px;
+				overflow: scroll;
+				overflow-y: display;
+				overflow-x: hidden;
+			}
+			.players-label {
+				float: right;
+				background-color: rgb(18, 155, 34);
+			}
+			.ui.rage.label, .ui.rage.labels .label {
+				background-color: rgb(18, 155, 34) !important;
+				border-color: rgb(18, 155, 34) !important;
+				color: #FFFFFF !important;
+			}
+			.ui.text.container.dim {
+				opacity: 0.95;
+			}
+			.highlight.police {
+				color: #7676E2;
+				font-weight: bold;
+			}
+			.highlight.ems {
+				color: #ED9FA0;
+				font-weight: bold;
+			}
+			.highlight.helper {
+				color: #8040BF;
+				font-weight: bold;
+			}
+			.highlight.admin {
+				color: #587B95;
+				font-weight: bold;
+			}
+			.ui.input {
+				color: #FFFFFF;
+			}
+			.search-bar {
+				display: none;
+			}	
+		</style>
+	</head>
+
+	<body>
+		<br />
+		<br />
+
+		<div class="ui text container dim" style="padding-top: 85px;">
+			<div class="ui inverted stacked segments">
+				<div class="ui inverted segment">
+					<h3 class="ui center aligned header custom">
+						<img src="https://cdn.discordapp.com/attachments/399441457938825218/518252763944189962/teste.png" style="opacity:0;" />
+						<!--<a class="players-label ui rage label" data-inverted="" data-tooltip="Toggle Search" data-position="bottom center" onClick="toggleSearch();">
+							<i class="search icon"></i> 
+							Search
+						</a>-->
+						<a class="players-label ui rage label" data-inverted="" data-tooltip="Online Players" data-position="bottom center">
+							<i class="user icon"></i>
+							<span id="usercount"></span>/<span id="usermax"></span>
+						</a>
+					</h3>
+				</div>
+
+				<div class="ui inverted segment playerlist">
+					<table class="ui selectable single line fixed table" id="players">
+						<thead>
+							<tr>
+								<th class="three wide">ID</th>
+								<th>Name</th>
+								<th class="five wide">Level</th>
+								<th>Ping</th>
+							</tr>
+						</thead>
+					  <tbody>
+					  </tbody>
+					</table>
+				</div>
+				<div class="ui inverted segment">
+					<div id="scoreboard_close" class="fluid positive ui button">
+						Schliessen
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+	  	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.16/js/dataTables.semanticui.min.js"></script>
+		<script>
+			$('.ui.dropdown').dropdown();
+			$(document).ready(function() {
+				$("#players_filter").css('display', 'none');
+			});
+			function toggleSearch(){
+				$("#players_filter").toggle();
+			}
+        </script>
+        <script>
+            $(document).ready(function() {
+                $("#scoreboard_close").click(function() {
+					mp.trigger("Destroy_Character_Menu");
+				});
+            });
+
+            function LoadPlayers(data, online, max) {
+				let localData = JSON.parse(data);
+				let localPlayers = localData;
+				$("#players > tbody").empty();
+				$("#usercount").empty();
+				$("#usermax").empty();
+				$('#usercount').append(online);
+				$('#usermax').append(max);
+				
+				for(let i = 0; i < localPlayers.length; i++) {
+                    $('#players > tbody:last-child').append('<tr><td>'+localPlayers[i].ID+'</td><td>'+localPlayers[i].Name+'</td><td>'+localPlayers[i].Level+'</td><td>'+localPlayers[i].Ping+'</td></tr>');
+				}
+            }
+			$('#players').DataTable({
+				"pageLength": 50,
+				"paging": false,
+				"ordering": false,
+				"info": false,
+				"searching": true,
+				"language": {
+					search: 'Search: <span class="ui input">_INPUT_</span>'
+				}
+			});
+        </script>
+	</body>
+</html>

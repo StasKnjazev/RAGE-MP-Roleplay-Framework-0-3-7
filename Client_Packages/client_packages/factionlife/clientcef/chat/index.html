@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+    <head>                                  
+        <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    
+    <script src="js/jquery.js"></script>
+	
+
+    </head>
+    <body>
+
+        <div id="chat" class="ui_element" style="opacity:0.7;">
+            <ul id="chat_messages">
+			
+            </ul>
+            <div><input id="chat_msg" type="text"/></div>
+        </div>
+
+<script>
+const chat =
+{
+	size: 0,
+	container: null,
+	input: null,
+	enabled: false,
+    timer: null,
+    current: 1,
+    previous: [],
+	hide_chat: 15000
+}
+const chatAPI =
+{
+	push: (args) =>
+	{
+		
+        let arr = args.split("(/\)");
+        let d = new Date();
+            d.setHours(d.getHours() + d.getTimezoneOffset()/60 - 4);
+
+            if(arr.length == 1) {
+                arr = [(d.getHours() + ':' + ((d.getMinutes() < 10) ? '0' : '') + d.getMinutes()),'<font style="color: orange !important;"></font>',arr[0]];
+            }
+		chat.size++;
+		if (chat.size >= 50)
+		{
+			chat.container.children(":first").remove();
+        }
+        chat.container.append('<li><span class="time">[' + d.getHours() + ':' + (((d.getMinutes() < 10) ? '0' : '') + d.getMinutes()) + ':' + (((d.getSeconds() < 10) ? '0' : '') + d.getSeconds()) + ']</span><span class="name">' + arr[1] + '</span><span class="msg">' + arr[2] + '</span></li>');
+        chat.container.scrollTop(9999);
+        show();
+		hide();
+	},
+	clear: () =>
+	{
+        chat.container.html("");
+        chat.previous = [];
+	},
+	activate: (toggle) =>
+	{
+        if (!toggle) enableChatInput(false);
+	},
+	show: (toggle) =>
+	{
+		if(toggle) {
+            $("#chat").show();
+        } else $("#chat").hide();
+	}
+}
+
+function hideChat(enable)
+{
+	if(enable) {
+        $("#chat").show();
+    } else $("#chat").hide();
+	
+}
+function enableChatInput(enable)
+{
+    if(enable == "true") {
+        show();
+        chat.input.val('');
+		$('#chat_msg').fadeIn(100);
+		$('#chat_msg').focus();
+        //chat.input.fadeIn().focus();
+	
+    } else {
+        chat.input.val('');
+		$('#chat_msg').fadeOut(100);
+		$('#chat_msg').val('');
+        //chat.input.fadeOut();
+    }
+	
+	
+
+    chat.enabled = (enable == "true");
+}
+function hide() {
+    chat.timer = setTimeout(function () {
+        $("#chat").css("opacity", 0.65);
+        $(".background").css("opacity", 0);
+		$("#chat_messages").css("overflow",'hidden');
+		
+    }, chat.hide_chat);
+}
+function show() {
+    clearTimeout(chat.timer);
+    $("#chat").css("opacity", 0.92);
+    $(".background").css("opacity", 0.1);
+	$("#chat_messages").css("overflow",'overlay');
+}
+function previous() {
+    if(!chat.enabled) return false;
+    if(!chat.previous.length) return false;
+
+    if((chat.previous.length - chat.current) < 0) return false;
+
+    chat.input.val(chat.previous[chat.previous.length - chat.current]);
+    chat.current++;
+	
+	$("#chat_msg").get(0).setSelectionRange(10000,10000);
+}
+function next() {
+    if(!chat.enabled) return false;
+    if(!chat.previous.length) return false;
+    if(chat.current == 1) return chat.input.val('');
+
+    chat.current--;
+    chat.input.val(chat.previous[chat.previous.length - chat.current]);
+	
+	$("#chat_msg").get(0).setSelectionRange(10000,10000);
+}
+function sendMsg() {
+    let msg = chat.input.val();
+
+    if(msg.length > 0 && msg.length <= 200) {
+        if(msg[0] == '/') {
+            mp.invoke("command", msg.substring(1));
+        } else { mp.trigger("Send_ToServer", msg); hide(); }
+
+        if(chat.previous.length >= 20) chat.previous.splice(0, 1);
+        chat.previous.push(msg);
+    } else if(msg.length > 200) {}
+}
+
+$("body").on('input', '#chat_msg', function() {
+    if(!chat.enabled) return $(this).val('');
+
+    let value = $(this).val();
+
+    if(value.length > 200) $(this).val(value.substring(0, 200));
+});
+$(document).ready(function() {
+    chat.input = $("#chat_msg");
+    chat.container = $("#chat ul#chat_messages");
+    hide();
+});
+
+
+
+/*
+
+
+// Messages container.
+const messages_container	= $('#chat #chat_messages');
+// Numbers of max chat messages.
+const max_chat_messages		= 100;
+// Input enbaled.
+let chat_input_enabled		= false;
+// Message counter (default value is -1).
+let message_counter		= -1;
+// Chat enabled.
+let chat_enabled		= true;
+// Player messages.
+let player_messages		= [];
+// Player messages limit.
+const player_messages_limit	= 50;
+// Players current message.
+let player_current_message	= '';
+
+// Enable/disable chat input.
+function enableChatInput(state, event) {
+	mp.invoke("focus", state);
+	event.preventDefault();
+
+	if (state) {
+		$('#chat_input').fadeIn(100);
+		$('#chat_input').focus();
+		messages_container.css('overflowY', 'visible');
+
+		chat_input_enabled = true;
+
+		let height = messages_container[0].scrollHeight;
+		if (height > messages_container.height())
+			messages_container.stop().animate({scrollTop: height}, 250, 'swing');
+
+		mp.trigger('chatInputActive');
+	} else {
+		$('#chat_input').fadeOut(100);
+		$('#chat_input').val('');
+		messages_container.css('overflowY', 'hidden');
+
+		let height = messages_container[0].scrollHeight;
+		if (height > messages_container.height())
+			messages_container.stop().animate({scrollTop: height}, 250, 'swing');
+
+		message_counter = -1;
+		player_current_message = '';
+		chat_input_enabled = false;
+
+		mp.trigger('chatInputInactive');
+	}
+
+}
+
+// Insert message in the chat.
+function insertMessageToChat(str) {
+	if (messages_container.children().length == max_chat_messages)
+		messages_container.children(':first').remove();
+
+	messages_container.append(`<div class="chat_message">${str}</div>`);
+
+	let height = messages_container[0].scrollHeight;
+	if (height > messages_container.height())
+		messages_container.scrollTop(height);
+}
+
+// Show/hide default chat.
+function showChat(state) {
+	if (state) {
+		$('#chat').css('display', 'table-cell');
+
+		chat_enabled = true;
+	} else {
+		$('#chat').css('display', 'none');
+		$('#chat_input').css('display', 'none');
+		$('#chat_input').val('');
+
+		chat_enabled = false;
+	}
+}
+
+// Clear chat (messages number).
+function clearChat(messagesNumber) {
+	if (messagesNumber) {
+		messages_container.children().toArray().reverse().slice(0, messagesNumber).forEach(item => {
+			$(item).remove();
+		});
+	} else {
+		messages_container.children().each((index, item) => {
+			item.remove();
+		});
+	}
+}
+
+// Set players current message.
+$(document).on('input', '#chat_input', function() {
+	player_current_message = $(this).val();
+});
+
+
+var chatAPI =
+{
+	push: insertMessageToChat,
+	clear: clearChat,
+	activate: enableChatInput,
+	show: showChat
+};
+
+// Keys listener.
+$(document).keydown(function(e) {
+	if (!chat_enabled)
+		return;
+	switch (e.which) {
+		// Show input.
+		case 84: {
+			if ($('#chat_input').css('display') == 'none') {
+				enableChatInput(true, e);
+			}
+
+			break;
+		}
+
+		// Press the enter.
+		case 13: {
+			let message = $('#chat_input').val();
+
+			if (message.trim().length > 0) {
+				// Command.
+				if (message[0] == '/') {
+					let command = message.substr(1);
+					if (command.trim().length > 0) {
+						mp.invoke("command", command.toLowerCase());
+					}
+				// Message.
+				} else {
+					mp.invoke("chatMessage", message);
+				}
+			}
+
+			// Save message to players messages array.
+			if (message.trim().length > 0)
+				player_messages.push(message);
+
+			if (player_messages.length > player_messages_limit)
+				player_messages.shift();
+
+			enableChatInput(false, e);
+
+			break;
+		}
+
+		// Key up or key down.
+		case 38:
+		case 40: {
+			e.preventDefault();
+			if (chat_input_enabled && player_messages.length > 0 ) {
+				let arr = player_messages.slice().reverse();
+
+				if (e.which === 38) {
+					if (message_counter < player_messages.length-1)
+						message_counter++;
+				} else {
+					if (message_counter > -1)
+						message_counter--;
+				}
+
+				if (message_counter > -1)
+					$('#chat_input').val(arr[message_counter]);
+				else
+					$('#chat_input').val(player_current_message);
+			}
+
+			break;
+		}
+	}
+});
+
+
+*/
+</script>
+    </body>
+</html>

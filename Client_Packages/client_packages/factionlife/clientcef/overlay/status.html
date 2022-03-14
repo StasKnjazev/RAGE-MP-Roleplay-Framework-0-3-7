@@ -1,0 +1,125 @@
+<!--
+  _____  _____   ____       _ ______ _____ _______    _____ _  __           ___________ 
+ |  __ \|  __ \ / __ \     | |  ____/ ____|__   __|  / ____| |/ /    /\    |___  /_   _|
+ | |__) | |__) | |  | |    | | |__ | |       | |    | (___ | ' /    /  \      / /  | |  
+ |  ___/|  _  /| |  | |_   | |  __|| |       | |     \___ \|  <    / /\ \    / /   | |  
+ | |    | | \ \| |__| | |__| | |___| |____   | |     ____) | . \  / ____ \  / /__ _| |_ 
+ |_|    |_|  \_\\____/ \____/|______\_____|  |_|    |_____/|_|\_\/_/    \_\/_____|_____|
+
+                                       ___         ___  
+                                     |__ \       / _ \ 
+                                        ) |     | | | |
+                                       / /      | | | |
+                                      / /_   _  | |_| |
+                                     |____| (_)  \___/ 
+
+
+
+                                     -------------------
+                                      discord: skazi#5686
+                                        made by skazi
+                   
+                   
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nifty.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        * {
+            border-radius: 0px!important;
+        }
+        body {
+            background: none!important;
+            font-family: 'Fjalla One', sans-serif;
+            user-select: none;
+        }
+        .panel {
+            margin-top: 3%; border-radius: 0px; color: #fff;
+            background: none!important;
+        }
+        .media-body {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .font-big {
+            font-size: 18px;
+        }
+        .pad-all {
+            padding: 5px 15px;
+        }
+        .progress-xl {
+            height: 35px!important;
+            margin: 0px!important;
+        }
+        .col-md-2 {
+            width: 14%!important;
+        }
+        .col-md-10 {
+            width: 85%!important;
+        }
+        h5 {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="col-md-10"></div>
+        <div class="panel col-md-2">
+            <div class="panel media middle">
+                <div class="media-left bg-success pad-all">
+                    <p class="mar-no text-white font-big">R$</p>
+                </div>
+                <div class="media-body pad-lft">
+                    <p class="mar-no text-white font-big moneyStatus">3,000,000</p>
+                </div>
+            </div>
+			<div class="panel media middle">
+                <div class="media-left bg-danger pad-all">
+                    <p class="mar-no text-white font-big">R$</p>
+                </div>
+                <div class="media-body pad-lft">
+                    <p class="mar-no text-white font-big moneyStatus">15,000,000</p>
+                </div>
+            </div>
+
+            <div class="panel media middle" style="margin-top: 600px; auto; ">
+                <div class="media-left bg-warning pad-all">
+                    <p class="mar-no text-white font-big"><i class="fas fa-utensils"></i></p>
+                </div>
+                <div class="media-body">
+                    <div class="progress progress-xl"><div style="width: 3%;" class="progress-bar progress-bar-warning hungryStatus"></div></div>
+                </div>
+            </div>
+			
+			<div class="panel media relative" style="margin-top: -10px;">
+                <div class="media-left bg-info pad-all">
+                    <p class="mar-no text-white font-big"><i class="fas fa-tint"></i></p>
+                </div>
+                <div class="media-body">
+                    <div class="progress progress-xl"><div style="width: 3%;" class="progress-bar progress-bar-info hungryStatus"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="cashSound" volume="0.1">
+      <source type="audio/ogg" src=""/>
+    </audio>
+    <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        let money = 0;
+
+        var cashSound = new Audio('https://cdn.discordapp.com/attachments/477196230494126103/481672317068640257/remy_cash.ogg');
+        cashSound.volume = 0.2;
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nifty.min.js"></script>
+</body>
+</html>

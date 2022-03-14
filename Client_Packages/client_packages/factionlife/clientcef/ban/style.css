@@ -1,0 +1,35 @@
+@font-face {
+	font-family: 'pricedownblack';
+	/* GTA V Font, check license before using !>https: //www.dafont.com/de/pricedown.font */
+	src: url('font/pricedown.black.ttf') format('truetype');
+}
+
+body {
+	background-color: black;
+}
+
+.window{
+	max-width: 40%;
+    margin-left: 26%;
+    margin-top: 10%;
+    padding: 15px 20px 15px 20px;
+}
+
+h1 {
+	font-family: pricedownblack;
+	color: rgb(236, 217, 47);
+	text-align: center;
+	font-size: 400%;
+	margin-bottom: 0;
+}
+
+hr {
+	color: white;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif; 
+	text-align: center;
+	color: white;
+}
+

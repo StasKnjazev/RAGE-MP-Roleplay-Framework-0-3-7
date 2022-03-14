@@ -1,0 +1,171 @@
+C:\RAGEMP\server-files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\RAGEMP\server-files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\RAGEMP\server-files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\RAGEMP\server-files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Security.Principal.Windows.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Server Files - Copia (2)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire - Copia (6) - Copia\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Security.Principal.Windows.dll
+C:\Users\Mike\Documents\Server Files\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Security.Principal.Windows.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.xml
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Server Files - Copia\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Security.Principal.Windows.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.xml
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Project Skazi\bridge\resources\empire\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.deps.json
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\empire.pdb
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\xxHash.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Security.Principal.Windows.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.pdb
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\Bootstrapper.xml
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\bin\Debug\netcoreapp2.0\MySql.Data.xml
+C:\Users\Mike\Documents\Project Skazi - Copia (5)\bridge\resources\empire\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\empire.deps.json
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\empire.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\empire.pdb
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\Newtonsoft.Json.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.csproj.CoreCompileInputs.cache
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.AssemblyInfoInputs.cache
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.AssemblyInfo.cs
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.csproj.CopyComplete
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.pdb
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\Bootstrapper.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\Colorful.Console.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\Ben.Demystifier.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\NeoSmart.Hashing.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\bin\Debug\netcoreapp2.0\xxHash.dll
+c:\Users\DerStr1k3r\Downloads\ragev-server\obj\Debug\netcoreapp2.0\empire.csprojAssemblyReference.cache

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.common-material.min.css" />
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.min.css" />
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.mobile.min.css" />
+		<script src="https://kendo.cdn.telerik.com/2018.3.1017/js/jquery.min.js"></script>
+		<script src="https://kendo.cdn.telerik.com/2018.3.1017/js/kendo.all.min.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style class="text/css">
+			.ui.hiddden.divider {
+			content: "\A";
+			}
+			body {
+			background-color: rgba(0,0,0,0);
+			}
+		.setup-label {
+			float: right;
+		}
+		
+		.ui.inverted.segment>.ui.header {
+	padding: 10px 5px 10px 5px;/*padding 45 25 25 25 */
+    background: #131313;
+    border-bottom: 1px solid #ffb320;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	color: white;
+}
+.ui.attached.info.message, .ui.info.message {
+	padding: 20px 15px 20px 15px;/*padding 45 25 25 25 */
+    background: #ffb320;
+    border-bottom: 1px solid #ffb320;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	color: white;
+	padding: 3px;
+}
+
+.ui.segment {
+    position: relative;
+	padding: 10px 5px 10px 5px;/*padding 45 25 25 25 */
+    background: #131313;
+    border-bottom: 1px solid #ffb320;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	color: white;
+}
+.ui.compact.menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 0;
+    vertical-align: middle;
+	padding: 10px 5px 10px 5px;/*padding 45 25 25 25 */
+    background: #131313;
+    border-bottom: 1px solid #ffb320;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+	color: white;	
+}
+		</style>
+	</head>
+	<body>
+		<div class="ui grid">
+			<div class="one wide column" style="padding-top: 360px; margin-left: 50px;">
+			<div class="ui teal compact vertical labeled icon menu">
+			
+  <a class="item" data-tab="hair" onclick="Show_Menu(0)">
+  <img  class="gamepad icon" src="https://image.flaticon.com/icons/svg/40/40739.svg">
+  </a>	
+  <a class="item" data-tab="barber" onclick="Show_Menu(1)">
+  <img  class="gamepad icon" src="https://image.flaticon.com/icons/svg/24/24907.svg">
+  </a>	
+  <a class="item" data-tab="eyebrowns" onclick="Show_Menu(2)">
+  <img  class="gamepad icon" src="https://image.flaticon.com/icons/png/512/1005/1005673.png">
+  </a>	
+  <a class="item" data-tab="eyes"  onclick="Show_Menu(3)">
+  <img  class="gamepad icon" src="https://image.flaticon.com/icons/svg/535/535193.svg">
+  </a>	
+  <a class="item" data-tab="chesthair" onclick="Show_Menu(4)">
+  <img  class="gamepad icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHxfbZyAxij-QCPF6KXhu2DXjNOLGC2NdPICbAoqN7LrYro6J7">
+  </a>
+  
+</div>
+			</div>
+			
+			<div class="four wide column" style="padding-top: 297px; margin-left: -15px;">
+			<div class="ui teal inverted segment">
+						<h3 class="ui white center aligned header">
+							Friseurladen
+							
+						</h3>
+					</div>
+					
+				<div class="ui segment"  style="width:auto; height:290px">
+					
+
+
+
+					<center>
+					<div class="ui active tab" data-tab="hair"></div>
+					<div class="ui active tab" data-tab="barber"></div>
+					<div class="ui active tab" data-tab="eyebrowns"></div>
+					<div class="ui active tab" data-tab="eyes"></div>
+					<div class="ui active tab" data-tab="chesthair"></div>
+					<div id="info_message"><div class="ui info message">Wählen Sie einen der Artikel in der nächsten Kategorie aus, um ihn anzuzeigen oder zu kaufen.</div></div>
+					<div id="content_menu" style="display:none;">
+						<h3 class="ui red horizontal header divider"><span id="head_title"></span><span style="opacity:0;">--</span> (<span id="display-range-value">0</span>)</h3>
+						<br>
+						<div class="ui red range" id="menu_range"></div>
+			
+					<div id="range_2" style="display:none;">
+						Farbe #1   <a class="ui label setup-label" id="menu_range_2_value">0</a>
+<div class="ui green range" id="menu_range_2"></div>
+					</div>
+						<div id="range_3" style="display:none;">
+						Farbe #2   <a class="ui label setup-label" id="menu_range_3_value">0</a>
+<div class="ui green range" id="menu_range_3"></div>
+						</div>
+						
+
+						<div class="ui success message">
+  <div class="header">
+    Dieser Artikel kostet: <b>$250</b>
+  </div>
+</div>
+
+<button class="ui fluid positive basic button" onclick="BuyBarber()">Kaufen</button>
+
+						<br>
+						<br>
+					</div>
+						
+				</div>
+				<button class="fluid ui black button" onclick="CloseMenu()">Schliessen</button>
+			</div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+		</div>
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+		<script>
+			$('.tabular.menu .item').tab();
+			
+			var current_menu = 0;
+			function LoadClothes() {
+
+				
+			}
+			
+			function BuyBarber() {
+				
+				mp.trigger("BuyBarber", current_menu);
+				
+			}
+			
+			function Show_Menu(menu_id) {
+				
+				mp.trigger("Barber_Update_Character");
+				$("#info_message").hide();
+				$("#content_menu").show();
+				$('#menu_range').html("");
+				$('#menu_range_2').html("");
+				$('#menu_range_3').html("");
+				$('#range_3').hide();
+				$('#range_2').hide();
+				if(menu_id === 0)
+				{
+					current_menu = 0;
+					$("#head_title").text("Cabelo");
+					
+					$('#menu_range').range({
+						min: 0,
+						max: 113,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_hair", val, data), $('#display-range-value').html(val) }
+					});
+			
+					$('#menu_range_2').range({
+						min: 0,
+						max: 63,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_hair_color_1", val, data), $('#menu_range_2_value').html(val) }
+					});
+					
+					$('#menu_range_3').range({
+						min: 0,
+						max: 63,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_hair_color_2", val, data), $('#menu_range_3_value').html(val) }
+					});
+					
+					$("#range_3").show();
+					$("#range_2").show();
+				}
+				else if(menu_id === 1)
+				{
+					current_menu = 1;
+					$("#head_title").text("Barba");
+					
+					$('#menu_range').range({
+						min: 0,
+						max: 28,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_beard", val, data), $('#display-range-value').html(val) }
+					});
+					
+					$('#menu_range_2').range({
+						min: 0,
+						max: 63,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_beard_color", val, data), $('#menu_range_2_value').html(val) }
+					});
+					$("#range_2").show();
+				}
+				else if(menu_id === 2)
+				{
+					current_menu = 2;
+					$("#head_title").text("Sombracelha");
+					
+					$('#menu_range').range({
+						min: 0,
+						max: 31,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_eyebrown", val, data), $('#display-range-value').html(val) }
+					});
+					
+					$('#menu_range_2').range({
+						min: 0,
+						max: 63,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_eyebrown_color", val, data), $('#menu_range_2_value').html(val) }
+					});
+					$("#range_2").show();
+				}
+				else if(menu_id === 3)
+				{
+					current_menu = 3;
+					$("#head_title").text("Cor dos Olhos");
+					
+					$('#menu_range').range({
+						min: 0,
+						max: 6,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_eyes", val, data), $('#display-range-value').html(val) }
+					});
+					
+					
+				}
+				else if(menu_id === 4)
+				{
+					current_menu = 4;
+					$("#head_title").text("Cabelo no Peito");
+					
+					$('#menu_range').range({
+						min: 0,
+						max: 10,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_chesthair", val, data), $('#display-range-value').html(val) }
+					});
+					
+					$('#menu_range_2').range({
+						min: 0,
+						max: 63,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("barber_range_chesthair_color", val, data), $('#menu_range_2_value').html(val) }
+					});
+					$("#range_2").show();
+				}
+			}
+			
+						
+			function OnRangeChange(id, val, data) {
+				console.log(id, val);
+				mp.trigger("ClientOnRangeChangeBarber", id, val);
+			}
+			
+			function CloseMenu() {
+				mp.trigger("Barber_Menu_Destroy");
+			}
+			
+		</script>
+	</body>
+</html>

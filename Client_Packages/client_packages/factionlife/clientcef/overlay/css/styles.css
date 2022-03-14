@@ -1,0 +1,142 @@
+img {
+height: 1vw;
+padding: 0 0 0 5px;
+position: absolute;
+top: 50%;
+margin: 0;
+transform: translate(0, -50%)
+
+}
+div.containerx {
+  margin-bottom: 2px;
+  position: absolute;
+  height: 1.5vw;
+  width: 7.4vw;
+  top: 45.5vw;
+  left: 16.5vw;
+background-color: rgb(33, 31, 33);
+border-top:2px solid #232323;
+border-right:2px solid #232323;
+border-bottom:2px solid #232323;
+border-left:2px solid #232323;
+opacity:0.85;
+}
+div.container2 {
+  margin-bottom: 2px;
+  position: absolute;
+  height: 1.5vw;
+  width: 7.4vw;
+  top: 47.5vw;
+  left: 16.5vw;
+background-color: rgb(33, 31, 33);
+border-top:2px solid #232323;
+border-right:2px solid #232323;
+border-bottom:2px solid #232323;
+border-left:2px solid #232323;
+opacity:0.85;
+}
+div.container3 {
+  margin-bottom: 2px;
+  position: absolute;
+  height: 1.5vw;
+  width: 7.4vw;
+  top: 49.5vw;
+  left: 16.5vw;
+background-color: rgb(33, 31, 33);
+border-top:2px solid #232323;
+border-right:2px solid #232323;
+border-bottom:2px solid #232323;
+border-left:2px solid #232323;   
+opacity:0.85;
+}
+div.container4 {
+  margin-bottom: 2px;
+  position: absolute;
+  height: 1.5vw;
+  width: 7.4vw;
+  top: 51.5vw;
+  left: 16.5vw;
+	background-color: rgb(33, 31, 33);
+border-top:2px solid #232323;
+border-right:2px solid #232323;
+border-bottom:2px solid #232323;
+border-left:2px solid #232323;
+opacity:0.85; 
+}
+div.container5 {
+  margin-bottom: 2px;
+  position: absolute;
+  height: 1.5vw;
+  width: 7.4vw;
+  top: 53.5vw;
+  left: 16.5vw;
+	background-color: rgb(33, 31, 33);
+border-top:2px solid #232323;
+border-right:2px solid #232323;
+border-bottom:2px solid #232323;
+border-left:2px solid #232323;
+opacity:0.85;   
+}
+.line {
+  color: white;
+  text-align: right;
+  padding-left: 1.5vw;
+  padding-top: 0.25vw;
+  position: absolute;
+  font-family: 'Calibri';
+  font-size: 0.9vw;
+  z-index: 0;
+}
+.hunger {
+  width: 16%;
+  height: 0.5vw;
+  background: rgba(255, 157, 0, 1);
+  position: absolute;
+  left: 0vw;
+  top: 0vw;
+  z-index: 0;
+}
+.water {
+  width: 50%;
+  height: 0.5vw;
+  background: rgba(0, 225, 255, 1);
+  position: absolute;
+  left: 0vw;
+  top: 0vw;
+  z-index: 0;
+}
+.benzin {
+  width: 70%;
+  height: 0.5vw;
+  background: rgba(183, 0, 0, 1);
+  position: absolute;
+  left: 0vw;
+  top: 0vw;
+  z-index: 0;
+}
+.moneyStatus {
+  color: white;
+  text-align: right;
+  padding-left: 1.5vw;
+  padding-top: 0.25vw;
+  position: absolute;
+  font-family: 'Calibri';
+  font-size: 0.9vw;
+  z-index: 0;
+}
+.voice {
+  color: white;
+  text-align: left;
+  padding-left: 1.5vw;
+  padding-top: 0.25vw;
+  position: absolute;
+  font-family: 'Calibri';
+  font-size: 0.9vw;
+  z-index: 0;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  background: transparent;
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Copyright © 2019 DerStr1k3r. All rights reserved. -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1300, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="css/organicfoodicons.css" />
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+		<link rel="stylesheet" type="text/css" href="css/util.css">
+		<!--===============================================================================================-->
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr-custom.js"></script>
+		<!--===============================================================================================-->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="./css/player.css" />
+		<link rel="stylesheet" href="./css/player-navi.css" />
+
+		<style type="text/css">
+			@keyframes animationBeat {
+				0%   {transform: scale(1); filter:brightness(1);}
+				50%  {transform: scale(1.03); filter:brightness(1.2);}
+				100%   {transform: scale(1); filter:brightness(1);}
+			}
+			body {
+				background-color: rgba(0,0,0,0);
+				overflow: hidden;
+			}
+			#login, #changelog, #password-recovery, #register {
+				box-shadow: 0px 0px 12px 0px;
+				background: #131313;
+				border-bottom: 1px solid #2b69d8;
+			}
+			.sidebar {
+				position: fixed;
+				width: 100%;
+				height: 100vh;
+				background: #131313;
+				border-bottom: 1px solid #2b69d8;
+				font-size: 0.65em;
+				opacity: 0.9;
+				color: rgba(255,255,255,.75);
+			}			
+			.login {
+				margin-top: 25px;
+			}
+			#logo {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			#logo img {
+			  margin-left: auto;
+			  margin-right: auto;
+			}
+			body > .grid {
+				height: 100%;
+			}
+			.ui.old.button {
+				background: #131313;
+				color: white;
+				border-bottom: 1px solid #2b69d8;
+			}
+			.changelog {
+				display: none;
+			}
+			.forgot-password {
+				display: none;
+			}
+			.register {
+				display: none;
+			}
+			.changelog-main {
+				height: 400px;
+				overflow: scroll;
+				overflow-y: display;
+				overflow-x: hidden;
+			}
+			.header-section {
+				overflow: hidden;
+				padding: 18px 0;
+				border-bottom: 1px solid #2b69d8;
+			}
+			form {
+			}
+			.ui.segments {
+				background: #131313;
+				color: #fff;
+			}
+			.colorlibcopy-agile {
+				margin: 2em 0 1em;
+				text-align: center;
+			}
+			.colorlibcopy-agile p {
+				font-size: .9em;
+				color: #fff;
+				line-height: 1.8em;
+				letter-spacing: 1px;
+				font-weight: 100;
+			}
+			.colorlibcopy-agile p a {
+				color: #fff;
+				transition: 0.5s all;
+				-webkit-transition: 0.5s all;
+				-moz-transition: 0.5s all;
+				-o-transition: 0.5s all;
+				-ms-transition: 0.5s all;
+			}
+			.colorlibcopy-agile p a:hover {
+				color: #000;
+			}
+			.fuereuch {
+				animation-name: smoke;                // Name der Animation
+				animation-duration: 5s;               // Dauer der Animation
+				animation-iteration-count: infinite;  // Anzahl der Wiederholungen
+			}
+			@keyframes smoke {
+				from {  transform: translateX(0px)    }
+				to   {  transform: translateX(-100px) }
+			}
+			
+			ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+	border-bottom: 1px solid #2b69d8;
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000', GradientType=0 );	
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #2b69d8;
+}
+
+.news-caption {
+    color: rgba(255,255,255,.75);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 60px 30px;
+    font-size: 18px;
+    z-index: 20;
+    font-weight: 300;
+    background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000', GradientType=0 );
+}
+		</style>
+	</head>
+	<body>
+	<div id="particles-js"></div>
+		<div class="login main-w3layouts wrapper">
+			<div class="ui centered grid center" style="padding-top: 10px;">
+				<div class="ten wide column">
+					<br><br><br>
+					<br><br><br>
+					<div class="segments" id="login">		
+					<div class="segments">
+					<nav class="site-header sticky-top py-1">
+						<div class="d-flex flex-column flex-md-row justify-content-between">
+							<div class="content-head content-dark">
+								<p class="headline font-heebo"><a class="py-2 d-none d-md-inline-block item"><i class="fas fa-sign-in-alt"></i> Einloggen</a>
+							</div>
+						</div>
+					</nav>
+						<p style="text-align: center;">Beginne nun dein Wahres Leben</p>
+						<form class="contact100-form validate-form">
+							<div class="wrap-input100 validate-input" data-validate = "Passwort is required">
+								<span class="label-input100">Passwort:</span>
+								<input class="input100" type="password" name="password" placeholder="Passwort" id="login_password"></input>
+								<span class="focus-input100"></span>
+							</div>
+							<div class="container-contact100-form-btn">
+								<button class="contact100-form-btn">
+									<span>
+										Login
+										<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+									</span>
+								</button>
+							</div>
+							<div class="hidden divider"></div>
+							<br />
+							<div class="error message"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<ul>
+				<li><a class="active" href="#home">Willkommen bei Faction-Life Reloaded</a></li>
+				<li style="float:right;"><a href="">&copy; 2021 Faction-Life Reloaded. All rights reserved.</a></li>
+			</ul>			
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+		$(document).ready(function() {
+			$('.pointing.menu .item').tab();
+			$('.ui.checkbox').checkbox();
+			$('.ui.accordion').accordion();
+			$('.validate-form').form({
+				fields: {
+					password: {
+					  identifier: 'password',
+					  rules: [{
+						type: 'empty',
+						prompt: 'Bitte geben Sie Ihr Passwort ein.'
+					  }]
+					}
+				},
+				onSuccess: SubmitForm
+			});
+		});
+		
+		function SetStatusMessage(msg) {
+			$("#status_msg").text(msg);
+		}
+		
+		function SubmitForm() {
+			SetStatusMessage("Login");
+			mp.trigger("loginUser", $("#login_user").val(), $("#login_password").val(), $('.ui.checkbox').checkbox('is checked'));
+			return true;
+		}
+		
+		function SubmitRegister() {
+			SetStatusMessage("Register");
+			mp.trigger("registerUser", $("#register_user").val(), $("#register_password").val());
+			return true;
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/speed.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="huds">
+      <div class="hud dashboard">
+        <div class="speedometer">
+          <svg class="circle" width="50" height="50">
+            <circle
+              class="outer"
+              stroke="#FFFFFF"
+              stroke-width="0.5"
+              style="stroke-opacity: 0.2;"
+              fill="transparent"
+              r="18"
+              cx="25"
+              cy="25"
+              stroke-dasharray="70 30"
+              stroke-dashoffset="0"
+            />
+            <circle
+              class="background"
+              stroke="#FFFFFF"
+              stroke-width="1.5"
+              style="stroke-opacity: 0.2;"
+              fill="transparent"
+              r="18"
+              cx="25"
+              cy="25"
+              stroke-dasharray="70 30"
+              stroke-dashoffset="0"
+            />
+            <circle
+              class="progress progress-speed"
+              stroke="url(#gradient)"
+              stroke-width="1.5"
+              style="stroke-opacity: 1;"
+              fill="transparent"
+              r="18"
+              cx="25"
+              cy="25"
+              stroke-dasharray="70 30"
+              stroke-dashoffset="0"
+            />
+            <defs>
+              <linearGradient id="gradient">
+                <stop offset="30%" stop-color="#FF0245" />
+                <stop offset="100%" stop-color="#BBFFFE" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="text">
+            <span class="speed"></span>
+            <div class="kmh">km/h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function setProgressFuel(percent, element) {
+        var circle = document.querySelector(element);
+        var radius = circle.r.baseVal.value;
+        var circumference = radius * 2 * Math.PI;
+        var html = $(element)
+          .parent()
+          .parent()
+          .find("span");
+
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = `${circumference}`;
+
+        const offset =
+          circumference - ((-percent * 73) / 100 / 100) * circumference;
+        circle.style.strokeDashoffset = -offset;
+
+        html.text(Math.round(percent));
+      }
+
+      // Speed
+      function setProgressSpeed(value, element) {
+        var circle = document.querySelector(element);
+        var radius = circle.r.baseVal.value;
+        var circumference = radius * 2 * Math.PI;
+        var html = $(element)
+          .parent()
+          .parent()
+          .find("span");
+        var percent = (value * 100) / 220;
+
+        circle.style.strokeDasharray = `${circumference} ${circumference}`;
+        circle.style.strokeDashoffset = `${circumference}`;
+
+        const offset =
+          circumference - ((-percent * 73) / 100 / 100) * circumference;
+        circle.style.strokeDashoffset = -offset;
+
+        html.text(value);
+      }
+    </script>
+  </body>
+</html>

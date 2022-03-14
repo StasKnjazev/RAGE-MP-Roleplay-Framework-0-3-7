@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1300, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="./css/player.css" />
+		<link rel="stylesheet" href="./css/player-navi.css" />		
+		<style type="text/css">
+			.help-main {
+			max-height: 500px;
+			width: 600px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			}.header {
+			font-size: 1.3em !important;
+			}.help-sub p {
+			font-size: 1.2em;
+			}.help-sub ul {
+			font-size: 1.2em !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content-wrapper content-wrapper anim">
+			<div class="ui stacked segments">
+				<div class="ctx-header">
+				<div class="content-head content-dark">
+					<p class="headline font-heebo" id="business_name">Firmenname</p>
+				</div>				
+				</div>
+				<div class="ctx-item inventory-main">
+				<div class="content-navi content-dark line-red-top">
+					<div class="navi-item">
+						<a>Derzeit <span id="vehicle_count">1</span> Fahrzeug zum Verkauf bei diesem Autohaus!</a>
+					</div>
+				</div>					
+					<table class="ui definition table" id="contracts">
+						<thead>
+							<tr>
+								<th class="single line" width="10px;"></th>
+								<th class="">
+									<center>
+									Modell
+								</th>
+								<th class="">
+									<center>
+									Preisspanne
+								</th>
+								<th class="">
+									<center>
+									Auf lager
+								</th>
+								<th>
+									<center>
+									Farben
+								</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody id="vehicle_availables">
+
+						</tbody>
+					</table>
+				</div>
+				<div class="content-close content-dark">
+					<center>
+						<div class="fluid positive ui button" id="close" style="background: rgba(0,0,0,0.8);">
+							Schliessen
+						</div>
+					</center>
+				</div>
+			</div>
+		</div>
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				$("#close").click(function() {
+					mp.trigger("Destroy_Character_Menu");
+				});
+			});
+			
+			var color_id = 0;
+			
+			function SetColorID(id) {
+				color_id = id;
+			}
+			function LoadVehiclesToDealership(name, vehicle_list) {
+				document.getElementById("business_name").innerHTML = name;
+				vehicles_count = 0;
+				// Vehicles From Stock
+				$("#vehicle_availables").empty();
+				veh_list = JSON.parse(vehicle_list);
+				if(veh_list.length <= 0) {
+					$('#vehicle_availables').append("");
+				} else {
+					for(let i = 0; i < veh_list.length; i++) {
+						
+						$('#vehicle_availables').append('<tr><td class="single line"><h2 class="ui center aligned header">'+veh_list[i].Model+'</h2></td><td><center><div class="ui tag labels"><a class="ui teal label">$'+veh_list[i].Price+'</a></div></td><td><center>'+veh_list[i].Stock+'</td><td><center><button onclick="SetColorID(27)" class="circular ui red icon button"></button><button onclick="SetColorID(38)" class="circular ui orange icon button"></button><button onclick="SetColorID(91)" class="circular ui yellow icon button"></button><button onclick="SetColorID(53)" class="circular ui green icon button"></button><button onclick="SetColorID(54)" class="circular ui teal icon button"></button><button onclick="SetColorID(64)" class="circular ui blue icon button"></button><button onclick="SetColorID(145)" class="circular ui violet icon button"></button><button onclick="SetColorID(145)" class="circular ui purble icon button"></button><button onclick="SetColorID(96)" class="circular ui brown icon button"></button><button onclick="SetColorID(14)" class="circular ui grey icon button"></button><button onclick="SetColorID(0)" class="circular ui black icon button"></button></td><td><center><button id="buy_vehicle_'+veh_list[i].Model+'" class="fluid ui green button">Kaufen</button></td></tr>');
+						
+						$("#buy_vehicle_" + veh_list[i].Model).click(function() {
+							mp.trigger("Business_Buy_Vehicle", veh_list[i].Model, color_id);
+						});
+						vehicles_count++;
+					}
+				}
+				
+				document.getElementById("vehicle_count").innerHTML = vehicles_count;
+				
+			}
+		</script>
+	</body>
+</html>

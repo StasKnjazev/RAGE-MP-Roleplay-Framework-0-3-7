@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=500, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css" integrity="sha256-1dcYWPAIBzLgOJlRNpMFWi1aIEWZU490to6kkbDmFM8=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/modal.min.css" integrity="sha256-Gok0aoSsdLyaieQ9Jjal8yrxtTx7REUZfPpap3UDtRU=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/modal.css" integrity="sha256-iYo63UCwcAkSKtDSQNKKhejRDJJXx9lNxXfaaLogNCU=" crossorigin="anonymous" />
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style type="text/css">
+			body {
+				background-color: rgba(0,0,0,0);
+			}
+			.taxi-main {
+				height: 300px;
+				width: 200px;
+				overflow: scroll;
+				overflow-y: display;
+				overflow-x: hidden;
+			}
+
+			#over img {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			#over a {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			#over input {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			.container {    
+				padding: 10px;
+				background: #252525;
+			}
+			.ui.vertical.menu .item {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 8px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding-left: 25px;
+			}
+			.ui.teal.message {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding-left: 40px;
+			}
+			.ui.teal.button, .ui.teal.buttons .button {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 15px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding-left: 40px;
+			}
+			.ui.grid {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 15px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				height:600px;
+			}
+			.ui.segment, .ui.segments .segment {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+			}
+
+			.ui.list .list > .item .header, .ui.list > .item .header {
+				display: block;
+				margin: 0em;
+				font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				color: #fff;
+			}
+
+			.ui.list .list > .item .description, .ui.list > .item .description {
+				display: block;
+				color: #fff;
+			}
+
+			.ui.header {
+				border: none;
+				margin: calc(2rem - 0.14285714em ) 0em 1rem;
+				padding: 0em 0em;
+				font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				line-height: 1.28571429em;
+				text-transform: none;
+				color: #fff;
+			}
+
+			.ui.block.header {
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+			}
+
+			.ui.segment, .ui.segments .segment {
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 18px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+			}			
+		</style>
+	</head>
+	<body>
+		<br />
+		<br />
+		<div class="ui container">
+			<div class="ui stacked segments">
+				<div class="ui segment">
+					<h3 class="ui block header" id="agency_name">
+					Dispatch System
+					</h3>
+				</div>
+				<div class="ui segment taxi-main">
+					<h2 class="ui header">
+					  <i class="phone volume icon"></i>
+					  <div class="content">
+					    Aktive Anrufe
+					    <div class="sub header" id="chamadas"></div>
+					  </div>
+					</h2>
+					<div class="ui relaxed celled list"  id="caller_list">
+					  
+					  <div class="item">					    
+					    <div class="right floated content">
+					          <a href="#" class="ui button">Anruf annehmen</a>
+					          <a href="#" class="ui red button">Ablehnen</a>
+					        </div>
+					        <i class="large street view middle aligned icon"></i>
+					    <div class="content">
+					      <p class="header">Anrufername: <i>John Conner</i> | Ende: <i>Gefängnis</i></p>
+					      <div class="description">Vor 2 Minuten angerufen</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="ui bottom attached segment" id="closeclass">
+				<div class="fluid grey ui button" id="service_close">
+					Schliessen
+				</div>
+			</div>
+		</div>
+<!-- Javascript (jQuery, Semantic) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js" integrity="sha256-0gIvTkdsp0OOeV8tx3UTdi3ehppGwZbzQMvZJYhbzsE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/modal.js" integrity="sha256-s1FX5fWJN8xZEUzuXGVPAZk/HPrmmyXBRU5PGlXW6QA=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/components/modal.min.js" integrity="sha256-WW+Q4OrdiQEfIMaaUdpug+NJ8fahgIG0UKvs8e9aO6o=" crossorigin="anonymous"></script>
+<script>
+	$('.tabular.menu .item').tab();
+</script>
+<script>
+
+		$(document).ready(function() {
+				$("#service_close").click(function() {
+					mp.trigger("Destroy_Character_Menu");
+				});
+			});
+			
+			
+			
+			function LoadCalls(name, jsonvar) {
+
+				document.getElementById('agency_name').innerHTML = name;
+				
+				
+				$("#caller_list").empty();
+				let services = JSON.parse(jsonvar);
+				
+				if(services.length > 0) {
+					document.getElementById('chamadas').innerHTML = "Derzeit wurden keine Dispatchs angefordert.";
+					
+					for(let i = 0; i < services.length; i++) {
+						$("#caller_list").append('<div class="item"><div class="right floated content"><a href="#" class="ui button" onclick="service_track(\''+services[i].index+'\')">Anruf suchen</a><a href="#" class="ui red button" onclick="service_remove(\''+services[i].index+'\')">Ablehnen</a></div><i class="large street view middle aligned icon"></i><div class="content"><p class="header">Name: <i>'+services[i].name+'</i> | Ort: <i>'+services[i].location+'</i></p><div class="description">'+services[i].timeago+'</div></div></div>');
+					
+
+					}
+				}
+				else
+				{
+					document.getElementById('chamadas').innerHTML = "Es gibt derzeit "+services.length+" ruft an.";
+				}
+			}
+			
+			function service_track(id) {
+				//alert(id);
+				mp.trigger("Service_Track", id);
+			}
+
+			function service_remove(id) {
+				//alert(id);
+				mp.trigger("Service_Remove", id);
+			}
+
+</script>
+</body>
+</html>

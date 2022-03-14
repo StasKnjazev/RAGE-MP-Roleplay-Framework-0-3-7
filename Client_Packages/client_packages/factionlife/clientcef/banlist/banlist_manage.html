@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1300, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link rel="stylesheet" href="banlist.css" />
+		<link rel="stylesheet" href="banlist-navi.css" />		
+		<link href="css/elegant-icons-style.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.help-main {
+				max-height: 700px;
+				width: auto;
+				overflow-y: auto;
+				overflow-x: hidden;
+			}.header {
+				font-size: 1.3em !important;
+			}.help-sub p {
+				font-size: 1.2em;
+			}.help-sub ul {
+				font-size: 1.2em !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="nav-collapse content-wrapper anim dark-bg">
+			<div class="dark-bg ctx-header">
+				<div class="content-head content-dark">
+					<p class="headline font-heebo">Spieler Ban System</p>
+				</div>
+				<div class="content-navi content-dark line-red-top">
+					<div class="navi-item fuereuch">
+						<p>
+							<a>Achtung: <span id="p_vehicle_count">5</span> Leute sind bisher nicht gebannt!</a>
+						</p>
+					</div>
+				</div>				
+				<div class="help-main ctx-item inventory-main">
+					<table class="ui definition table" id="contracts">
+						<thead>
+							<tr>
+								<th class="single line" width="10px;"><i class="icon_pin_alt"></i></th>
+								<th class="single line"><i class="icon_profile"></i> Username</th>
+								<th class="single line"><i class="icon_clock_alt"></i> Socialclub</th>
+								<th class="single line"><i class="icon_cogs"></i> Einstellung</th>
+							</tr>
+						</thead>
+						<tbody id="p_vehicle_list">
+
+						</tbody>
+					</table>
+				</div>
+				<div class="content-close content-dark">
+					<center>
+					<div class="fluid positive ui button" id="close" style="background: rgba(0,0,0,0.8);">
+						Schliessen
+					</div>
+					</center>
+				</div>
+			</div>
+		</div>
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#close").click(function() {
+					mp.trigger("Destroy_Character_Menu");
+				});
+
+			});
+			/*UPDATE users SET betaAcess = 1 WHERE `id` = "+id+";*/
+			function LoadBannedlist(vehicle_list) {
+				vehicles_count = 0;
+
+				$("#p_vehicle_list").empty();
+				veh_list = JSON.parse(vehicle_list);
+				if(veh_list.length <= 0) {
+					$('#p_vehicle_list').append("");
+				} else {
+					for(let i = 0; i < veh_list.length; i++) {
+						
+						$('#p_vehicle_list').append('<tr><td><center>'+veh_list[i].Index+'</td><td><center>'+veh_list[i].Name+'</td><td><center>'+veh_list[i].SocialName+'</td><td><center><div class="ui buttons"><button id="track_'+veh_list[i].Index+'" class="ui button active">Bannen</button></div></td></tr>');
+						
+						$("#track_" + veh_list[i].Index).click(function() {
+							mp.trigger("Player_Bannedlist_Aprove", veh_list[i].Index);
+						});
+						$("#excluir_" + veh_list[i].Index).click(function() {
+							mp.trigger("Player_Bannedlist_Remove", veh_list[i].Index);
+						});
+						vehicles_count++;
+					}
+				}
+				
+				document.getElementById("p_vehicle_count").innerHTML = vehicles_count;
+			}
+		</script>
+	</body>
+</html>

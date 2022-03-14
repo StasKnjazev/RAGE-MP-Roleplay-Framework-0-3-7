@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta content="width=1300, initial-scale=1 user-scalable=yes" name="viewport" />
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" href="./css/player.css" />
+		<link rel="stylesheet" href="./css/player-navi.css" />
+		<style type="text/css">
+			body {
+				background-color: rgba(0,0,0,0);
+				overflow: hidden;
+			}
+			#input-card, #changelog, #password-recovery {
+				box-shadow: 0px 0px 12px 0px;
+				background-image: url("img/bg.jpg") !important;
+			}
+			.input-card {
+				margin-top: 25px;
+			}
+			.img-logo {
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+			}
+			body > .grid {
+				height: 100%;
+			}
+			.ui.btn.button {
+				background-color: rgb(30, 150, 30);
+				color: white;
+			}
+			.changelog {
+				display: none;
+			}
+			.forgot-password {
+				display: none;
+			}
+			.changelog-main {
+				height: 400px;
+				overflow: scroll;
+				overflow-y: display;
+				overflow-x: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="input-card" style="padding-top: 190px; display:none;" id="input_card">
+			<div class="ui centered grid center container">
+				
+				<div class="ten wide column">
+					
+		
+					<!-- Signup -->
+					
+					<div class="content-wrapper content-wrapper anim" id="login">
+					  <div class="ctx-header menu">
+						<div class="content-head content-dark">
+							<p class="headline font-heebo" id ="input_title">
+								A Title
+							</p>
+						</div>
+					  </div>
+					  <div class="ctx-item">
+						<center><span id="status_msg">A example message</span></center><br />
+						<div class="ui middle form">
+							<div class="content-head">
+								<input type="text" name="text" placeholder="" class="content-dark" id="input_text"></input>
+							</div>
+							<button class="ui right floated blue middle button" style="padding-left: auto; position: absolute;" onclick="SubmitForm();">
+								<i class="icon sign in alternate"></i> Ok !
+							</button>
+							<div class="ui hidden divider"></div>
+							<br />
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script>
+		var callbackId = null;
+		$("#input_text").focus();
+		$("#input_text").get(0).setSelectionRange(10000,10000);
+		
+		//DisplayDialogFunction('teste', 'Este e o titulo', '3000', 'Este e a nova mensagem', "text");
+		
+		function DisplayDialogFunction(inputCallbackId, title, placeholder = null, description, type) 
+		{
+			document.getElementById('input_text').type = type;
+			callbackId = inputCallbackId;
+			$('#input_text').val(placeholder);
+			SetStatusMessage(description);
+			$("#input_title").text(title);
+			$('#input_card').show();
+
+		}
+		
+		function SetStatusMessage(msg) {
+			$("#status_msg").text(msg);
+		}
+
+		function SubmitForm() {
+			SetStatusMessage("Attempting..");
+
+			var input_text = document.getElementById("input_text").value;
+            if (input_text != "")
+			{
+				mp.trigger("client_input_response", callbackId, input_text);
+				$('#input_card').hide();
+			}	
+            else
+			{
+				$("#module-error").css("display", "block");
+                SetStatusMessage("Hey, warte !! Sie müssen unten etwas eingeben.");
+			}
+			
+			return true;
+		}
+		
+		$(function() {
+		  $('#input_text').keypress(function(e) {
+			var key = e.which;
+			if (key == 13)
+			{
+			  SubmitForm();
+			  return false;
+			}
+		  });
+
+		});
+		</script>
+	</body>
+</html>

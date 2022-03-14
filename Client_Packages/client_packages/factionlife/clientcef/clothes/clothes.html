@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.common-material.min.css" />
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.min.css" />
+		<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.mobile.min.css" />
+		<script src="https://kendo.cdn.telerik.com/2018.3.1017/js/jquery.min.js"></script>
+		<script src="https://kendo.cdn.telerik.com/2018.3.1017/js/kendo.all.min.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style class="text/css">
+			.ui.hiddden.divider {
+			content: "\A";
+			}
+			body {
+			background-color: rgba(0,0,0,0);
+			}
+			.setup-label {
+			float: รงe;
+			}
+		.ui.inverted.teal.segment {
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 15px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding-left: 40px;
+				padding:10px;
+}
+			.ui.teal.button, .ui.teal.buttons .button {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				padding: 15px 0;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding-left: 40px;
+				padding:10px;
+			}
+			.ui.grid {    
+				color: #fff;
+				margin: auto;
+			}
+			.ui.horizontal.divider {
+				display: table;
+				white-space: nowrap;
+				height: auto;
+				color: #fff;
+				line-height: 1;
+				text-align: center;
+			}
+			.ui.header {
+				border: none;
+				margin: calc(2rem - .14285714em) 0 1rem;
+				padding: 0 0;
+				font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+				font-weight: 700;
+				line-height: 1.28571429em;
+				text-transform: none;
+				color: #fff;
+				border-bottom: 1px solid #ffb320;
+			}
+			.ui.segment, .ui.segments .segment {    
+				background: #131313;
+				clear: both;
+				overflow: hidden;
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding:10px;
+			}
+			.ui.attached.warning.message, .ui.warning.message {
+				background: #131313;
+				clear: both;
+
+				border-bottom: 1px solid #ffb320;
+				color: #fff;
+				margin: auto;
+				padding:25px;
+				-webkit-box-shadow: 0 0 0 1px #c9ba9b inset, 0 0 0 0 transparent;
+				box-shadow: 0 0 0 1px #c9ba9b inset, 0 0 0 0 transparent;
+			}			
+		</style>
+	</head>
+	<body>
+		<div class="ui grid">
+			<div class="four wide column" style="padding-top: 360px; margin-left: 50px;">
+				<div class="ui segment">
+					<div class="ui teal inverted segment">
+						<h3 class="ui white center aligned header">
+							Bekleidungsgesch&auml;ft
+						</h3>
+					</div>
+					<div class="ui red tabular menu">
+						<div class="ui pointing secondary menu">
+							<a class="item" data-tab="shirt" onclick="active_menu(0)"><img src="https://image.flaticon.com/icons/svg/682/682914.svg"></a>
+							<a class="item" data-tab="pants" onclick="active_menu(1)"><img src="https://image.flaticon.com/icons/svg/682/682894.svg"></a>
+							<a class="item" data-tab="moletons" onclick="active_menu(2)"><img src="https://image.flaticon.com/icons/svg/682/682910.svg"></a>
+							<a class="item" data-tab="shoes" onclick="active_menu(3)"><img src="https://image.flaticon.com/icons/svg/682/682907.svg"></a>
+							<a class="item" data-tab="hats" onclick="active_menu(4)"><img src="https://image.flaticon.com/icons/svg/892/892357.svg"></a>
+							<a class="item" data-tab="glasses" onclick="active_menu(5)"><img src="https://image.flaticon.com/icons/svg/149/149075.svg"></a>
+							<!--<a class="item" data-tab="tab-name" onclick="active_menu(6)"><img src="https://image.flaticon.com/icons/svg/1260/1260388.svg"></a>-->
+						</div>
+					</div>
+					<center>
+					<div class="ui active tab" data-tab="shirt"></div>
+					<div class="ui active tab" data-tab="pants"></div>
+					<div class="ui active tab" data-tab="moletons"></div>
+					<div class="ui active tab" data-tab="shoes"></div>
+					<div class="ui active tab" data-tab="hats"></div>
+					<div class="ui active tab" data-tab="glasses"></div>
+					
+					<p id="stock_message"> W&auml;hlen Sie eine Kategorie aus, um unseren Bestand anzuzeigen.</p>
+					<div id="clothes_content" style="display:none;">
+						<h3 class="ui red horizontal header divider"><span id="shirt_name"></span><span style="opacity:0;">--</span> (<span id="display-range-value"></span>)</h3>
+						<div class="ui teal range" id="clothes_range"></div>
+						<br><br>
+						<div class="ui buttons">
+							<button onclick="shirt_back()" class="ui labeled icon button">
+							<i class="left chevron icon"></i>
+							Zur?ck
+							</button>
+							<button class="ui green button" onclick="Buy_Clothes()">
+							Kaufen
+							</button>
+							<button onclick="shirt_next()" class="ui right labeled icon button">
+							Weiter
+							<i class="right chevron icon"></i>
+							</button>
+						</div>
+					</div>
+					<br><br>
+					<button class="fluid ui teal button" onclick="CloseMenu()">Schliessen</button>
+				</div>
+			</div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+			<div class="four wide column"></div>
+		</div>
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+		<script>
+			$('.tabular.menu .item').tab();
+			
+			var female_shirt = [];
+			var female_moletons = [];
+			var female_pants = [];
+			var female_shoes = [];
+			var female_hats = [];
+			var female_glasses = [];
+			
+			var current_index = 0;
+			var current_menu = 0;
+			
+			
+				
+				
+			function OnRangeChange(id, val, data) {
+				console.log(id, val);
+				
+				current_index = val;
+				if(current_menu == 0)
+				{
+					$("#shirt_name").text(female_shirt[val].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_shirt[val].index);
+				}
+				else if(current_menu == 1)
+				{
+			
+					$("#shirt_name").text(female_pants[val].clothes_name);
+					mp.trigger("Preview_Clothes", "pants", female_pants[val].index);
+				}
+				else if(current_menu == 2)
+				{
+			
+					$("#shirt_name").text(female_moletons[val].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_moletons[val].index);
+				}
+				else if(current_menu == 3)
+				{
+			
+					$("#shirt_name").text(female_shoes[val].clothes_name);
+					mp.trigger("Preview_Clothes", "shoes", female_shoes[val].index);
+				}
+				else if(current_menu == 4)
+				{
+			
+					$("#shirt_name").text(female_hats[val].clothes_name);
+					mp.trigger("Preview_Clothes", "hats", female_hats[val].index);
+				}
+				else if(current_menu == 5)
+				{
+			
+					$("#shirt_name").text(female_glasses[val].clothes_name);
+					mp.trigger("Preview_Clothes", "glasses", female_glasses[val].index);
+				}
+			}
+			
+			function LoadClothes(arr_shirts, arr_moletons, arr_pants, arr_shoes, arr_hats, arr_glasses) {
+				current_index = 0;
+				current_menu = 0;
+				
+				female_shirt = JSON.parse(arr_shirts);
+				female_moletons = JSON.parse(arr_moletons);
+				female_pants = JSON.parse(arr_pants);
+				female_shoes = JSON.parse(arr_shoes);
+				female_hats = JSON.parse(arr_hats);
+				female_glasses = JSON.parse(arr_glasses);
+				
+				$("#shirt_name").text(female_shirt[current_index].clothes_name);
+				mp.trigger('Preview_Clothes', "shirt", female_shirt.index[current_index]);
+				
+					$('#clothes_range').range({
+						min: 0,
+						max: female_shirt.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				
+			}
+			
+			function Buy_Clothes() {
+				if(current_menu == 0)
+				{
+					mp.trigger("Buy_Clothes", "shirt", female_shirt[current_index].index);
+					
+				}
+				else if(current_menu == 1)
+				{
+					mp.trigger("Buy_Clothes", "pants", female_pants[current_index].index);
+				}
+				else if(current_menu == 2)
+				{
+					mp.trigger("Buy_Clothes", "shirt", female_moletons[current_index].index);
+				}
+				else if(current_menu == 3)
+				{
+					mp.trigger("Buy_Clothes", "shoes", female_shoes[current_index].index);
+				}
+				else if(current_menu == 4)
+				{
+					mp.trigger("Buy_Clothes", "hats", female_hats[current_index].index);
+				}
+				else if(current_menu == 5)
+				{
+					mp.trigger("Buy_Clothes", "glasses", female_glasses[current_index].index);
+				}
+			}
+			
+			function shirt_back() {
+				if(current_menu == 0)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_shirt[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_shirt[current_index].index);
+				}
+				else if(current_menu == 1)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_pants[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "pants", female_pants[current_index].index);
+				}
+				else if(current_menu == 2)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_moletons[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_moletons[current_index].index);
+				}
+				else if(current_menu == 3)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_shoes[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shoes", female_shoes[current_index].index);
+				}
+				else if(current_menu == 4)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_hats[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "hats", female_hats[current_index].index);
+				}
+				else if(current_menu == 5)
+				{
+					if(current_index - 1 < 0) return true;
+					current_index--;
+					
+					$("#shirt_name").text(female_glasses[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "glasses", female_glasses[current_index].index);
+				}
+				$('#clothes_range').range('set value', current_index);
+			}
+			
+			function shirt_next() {
+				if(current_menu == 0)
+				{
+					if(current_index + 1 >= female_shirt.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_shirt[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_shirt[current_index].index);
+				}
+				else if(current_menu == 1)
+				{
+					if(current_index + 1 >= female_pants.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_pants[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "pants", female_pants[current_index].index);
+				}
+				else if(current_menu == 2)
+				{
+					if(current_index + 1 >= female_moletons.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_moletons[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_moletons[current_index].index);
+				}
+				else if(current_menu == 3)
+				{
+					if(current_index + 1 >= female_shoes.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_shoes[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shoes", female_shoes[current_index].index);
+				}
+				else if(current_menu == 4)
+				{
+					if(current_index + 1 >= female_hats.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_hats[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "hats", female_hats[current_index].index);
+				}
+				else if(current_menu == 5)
+				{
+					if(current_index + 1 >= female_glasses.length) return true;
+					current_index++;
+					
+					$("#shirt_name").text(female_glasses[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "glasses", female_glasses[current_index].index);
+				}
+				$('#clothes_range').range('set value', current_index);
+			}
+			
+			function active_menu(id) {
+			
+				$('#stock_message').hide();
+				$('#clothes_content').show();
+				
+				current_menu = id;
+				current_index = 0;
+				
+				//
+				document.getElementById("clothes_range").innerHTML = "";
+				
+				
+				mp.trigger('Update_Player_Clothes');
+				
+				if(current_menu == 0)
+				{
+					$("#shirt_name").text(female_shirt[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_shirt[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_shirt.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				else if(current_menu == 1)
+				{
+					$("#shirt_name").text(female_pants[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "pants", female_pants[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_pants.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				else if(current_menu == 2)
+				{
+					$("#shirt_name").text(female_moletons[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shirt", female_moletons[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_moletons.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				else if(current_menu == 3)
+				{
+					$("#shirt_name").text(female_shoes[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "shoes", female_shoes[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_shoes.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				else if(current_menu == 4)
+				{
+					$("#shirt_name").text(female_hats[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "hats", female_hats[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_hats.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				else if(current_menu == 5)
+				{
+					$("#shirt_name").text(female_glasses[current_index].clothes_name);
+					mp.trigger("Preview_Clothes", "glasses", female_glasses[current_index].index);
+					
+					$('#clothes_range').range({
+						min: 0,
+						max: female_glasses.length,
+						start: 0,
+						step: 1,
+						smooth: false,
+						onChange: function(val, data) { OnRangeChange("clothes_range", val, data), $('#display-range-value').html(val) }
+					});
+				}
+				
+				$('#clothes_range').range('set value', current_index);
+				
+			}
+			
+			function CloseMenu() {
+				mp.trigger("Clothes_Menu_Destroy");
+			}
+			
+		</script>
+	</body>
+</html>

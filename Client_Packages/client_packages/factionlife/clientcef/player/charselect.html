@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nifty.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+    <style>
+        ::selection {
+          background: none!important;
+        }
+        body {
+            background: none!important;
+            font-family: 'Fjalla One', sans-serif;
+            letter-spacing: 0.6px;
+            user-select: none;
+        }
+        .panel-inventory {
+            margin-bottom: 0px!important;
+            border-radius: 0px;
+            background: #131313;
+            color: #fff!important;
+        }
+        .panel-footer {
+            color: #fff;
+        }
+        .panel-male {
+            background-color: #1A1A1A;
+        }
+        .panel-female {
+            background-color: #ab47bc;
+        }
+        h3 {
+            color: #fff!important;
+            font-size: 18px!important;
+        }
+        .g-select {
+            cursor: pointer;
+        }
+        .margt {
+            margin-top: 5%;
+        }
+        .gender {
+            background: rgba(81, 81, 81, 1.0);
+            height: 35px;
+            width: 95px;
+        }
+        .male {
+            height: 35px;
+            font-size: 20px;
+            background-color: #0ab1fc;
+        }
+        .male .fas {
+            margin-top: 8px;
+        }
+        .female {
+            height: 35px;
+            font-size: 20px;
+            background-color: #ab47bc;
+        }
+        .female .fas {
+            margin-top: 8px;
+        }
+        .gender-text {
+            margin-top: 8px;
+        }
+        input {
+            background-color: rgba(0,0,0,0.3)!important;
+            color: #fff!important;
+            text-align: center;
+            text-transform: uppercase;
+            border: none;
+            transition: none!important;
+            letter-spacing: 0.6px!important;
+        }
+        input:focus {
+            border: none;
+        }
+        .btn-default {
+            border-radius: 0px;
+        }
+		.panel-heading {
+					padding: 30px 25px 30px 25px;
+			background: #131313;
+			border-bottom: 1px solid #2b69d8;
+			-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			color: white;
+            font-size: 2.5vh;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container" style="margin-top: -80px;">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 margt">
+		<center>
+            <div class="panel panel-inventory">
+                <div class="panel-heading">
+                    <h3 class="panel-title">AUSWAHL VON <b>CHARAKTER</b></h3>
+                </div>
+                <div class="panel-footer panel-male">
+                    <center>
+                        WÄHLEN SIE DEN CHARAKTER, DEN SIE SPIELEN MÖCHTEN!
+                    </center>
+                </div>
+            </div>
+            <br/>
+			
+			<div id="characters">
+
+            </div>
+            <br/>
+				<button class="btn btn-danger btn-block " id="btn_newchar">CHARAKTER ERSTELLEN</button>				
+    </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nifty.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+    <script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('#btn_newchar').click(function() {
+					mp.trigger("CreateCharacter");
+				});
+			});
+				
+			function LoadCharacters(chars) {
+				var character = JSON.parse(chars);
+				
+				
+				if(character.length > 0) 
+				{
+					
+					for(let i = 0; i < character.length; i++) 
+					{
+						$('#characters').append('<div class="panel panel-inventory"><div class="panel-heading"><h3 class="panel-title"><center>CHARAKTER: <b>'+character[i].Name+'</b></h3></div> <div class="panel-footer panel-male"><table class="table"><tbody><tr><td>Cash</td><td>$'+character[i].Money+'</td><td>Staatsbank</td><td>$'+character[i].Bank+'</td></tr></tbody></table><button href="#" class="btn btn-info " role="button" id="preview_'+character[i].ID+'">Vorschau</button><button href="#" class="btn btn-success " role="button" id="select_'+character[i].ID+'">Auswählen</button></div></div><br/>');
+
+						$('#preview_'+character[i].ID).click(function() {
+							mp.trigger("ClientPreviewCharacterID", character[i].ID);
+						});
+						
+						$('#select_'+character[i].ID).click(function() {
+							mp.trigger("SelectCharacter", character[i].ID);
+						});
+
+					}
+				}
+			}
+		
+    </script>
+</body>
+</html>

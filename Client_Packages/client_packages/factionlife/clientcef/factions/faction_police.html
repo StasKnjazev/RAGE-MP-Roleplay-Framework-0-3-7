@@ -1,0 +1,401 @@
+<html>
+	<head>
+		<script src="jquery/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<title>MDC System</title>
+		<style type="text/css">#mdc-panel{box-shadow:0 0 25px #888;background-color:rgba(0,0,0,.8);color:#fff}#main-mdc-panel{box-shadow:0 0 25px #888;background-color:#fff;color:#000}.panel-body::-webkit-scrollbar{display:none}.btn{border:1px solid #000}.modal,.modal-content{background-color:rgba(0,0,0,.8);color:#fff}.blackTable{background-color:rgba(0,0,0,.5)!important;color:#fff!important}</style>
+	</head>
+	<body>
+		<div id="active_mdc" style="position:absolute;top:31%;left:5%;min-width:280px;display:none">
+			<div class="panel" id="mdc-panel">
+				<div class="panel-header text-center">
+					<h3 class="title">MDC</h3>
+				</div>
+				<table class="table table-condensed" style="color:#fff">
+					<thead>
+						<tr>
+							<th style="text-align:center">Fahrzeuge</th>
+							<th style="text-align:center">Plate</th>
+							<th style="text-align:center">Speed</th>
+						</tr>
+					</thead>
+				</table>
+				<div id="scrollDiv" class="panel-body" style="max-height:320px;overflow-y:scroll">
+					<table class="table table-condensed blackTable" style="color:#fff">
+						<tbody id="MDC" style="text-align:left"></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="main_mdc" style="position:absolute;top:25%;left:0;right:0;bottom:0;margin:auto">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6">
+					<div class="panel panel-primary" id="main-mdc-panel" style="min-width:1050px">
+						<div class="panel-heading" style="background-color:#fff;border:0">
+						<button id="main_mdc_x_close" type="button" class="close" style="color:#000">&times;</button> <img src="logomdc2.png" width="100%" style="text-align:left;margin-left:-15px;margin-top:-83px"></div>
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-xs-2" style="margin-top:-77px"><br>
+									<br>
+									<div class="btn-group-vertical">
+										<button id="mdc_record_search" class="btn btn-primary">Suche registrieren</button> 
+										<button id="mdc_plate_search" class="btn btn-primary">Fahrzeug suchen</button> 
+										<!--<button id="mdc_bolos" class="btn btn-primary">Bolos (0)</button> -->
+										<button id="mdc_warrants" class="btn btn-primary">Gesucht</button> 
+										<button id="mdc_activecalls" class="btn btn-primary">911 Anrufe (0)</button> 
+										<!--<button id="mdc_units" class="btn btn-primary">Einheiten (0)</button>-->
+									</div>
+									<br>
+									<br>
+									<br>
+								</div>
+								<div class="col-xs-10 text-center" id="mdc_main_page" style="max-height:500px;overflow-y:scroll">
+									<br>
+									<h3 id="main_page_title">Polizei Computer<br>Drücken Sie F2 zum Cursor und klicken Sie auf die Schaltflächen, um zu navigieren.</h3>
+									<div id="mdc_search_page" style="display:none">
+										<div class="form-group"><label for="mdc_search_plateperson" id="mdc_search_plateperson_label"></label> <input type="text" class="form-control" id="mdc_search_plateperson" placeholder="Geben Sie einen Vornamen ein, um den Bewohner in unserer Datenbank zu finden.">
+										<br>
+										<button type="button" id="mdc_bt_check_player" class="btn btn-primary btn-lg">Bewohner &uuml;berpr&uuml;fen</button></div>
+										<div id="not_found">
+										
+										</div>
+										<div id="found_search">
+										-----------------------------------------
+										<h6 id="mdc_search_info">John Connor</h6>
+										<div class="btn-group">
+											<div id="mdc_print_btn" style="color:#000" class="btn btn-success">Informationen ausdrucken</div>
+											<div id="mdc_print_prison_time_btn" style="color:#000" class="btn btn-primary">Berechnen Sie die Gefängniszeit</div>
+											<!--<div id="mdc_addcharge_btn" class="btn btn-default">Adicionar crime</div>
+											<div id="mdc_addticket_btn" class="btn btn-default">Adicionar multa</div>-->
+										</div>
+										<br><br>
+										<table class="table" id="mdc_search_table">
+											<thead>
+												<tr>
+													<th></th>
+													<th>Anklage</th>
+													<th>Typ</th>
+													<th>Offiziell</th>
+												</tr>
+											</thead>
+											<tbody id="mdc_search_charges">
+
+											</tbody>
+										</table>
+										</div>
+									</div>
+
+									<div id="mdc_table_page" style="display:none">
+
+										<nav class="navbar navbar-light bg-light">
+										  <div class="form-inline">
+											<input class="form-control mr-sm-8"  id="mdc_search_plate" type="search" placeholder="Suchen" aria-label="Suchen">
+											<button  id="mdc_bt_check_vehicle"  class="btn btn-outline-primary my-2 my-sm-0" type="text">Fahrzeug durchsuchen</button>
+										  </div>
+										</nav>
+
+										<div id="vehicle_not_found">
+										
+										</div>
+										<div id="found_vehicle_search">
+										-----------------------------------------
+										<h3 id="mdc_search_vehicle_info"></h3>
+										<br>
+										
+
+										<div class="row">
+										<div class="col-sm-2"></div>
+										  <div class="col-sm-4"><img src="http://cdn.faction-life.ml/veh/Sultan.png" id="vehicle_img" width="250px"  class="rounded"></div>
+										  <div class="col-sm-4">
+										  
+										  <table class="table">
+											<tbody>
+												<tr>
+													<td>Besitzer:</td>
+													<td><span id="vehicle_owner"></span></td>
+												</tr>
+
+												<tr>
+													<td>Modell:</td>
+													<td><span id="vehicle_model"></span></td>
+												</tr>
+												<tr>
+													<td>Platte:</td>
+													<td><span  id="vehicle_plate"></span></td>
+												</tr>
+												<tr>
+													<td>Höhe der Geldbuße:</td>
+													<td><span  id="vehicle_ticket"></span></td>
+												</tr>
+											</tbody>
+										</table>
+										</div>
+										</div>
+									
+										
+										</div>
+									</div>
+
+									<div id="mdc_warrants_page" style="display:none">
+									  <table class="table">
+											<thead>
+												<tr>
+													<th>Verdächtiger</th>
+													<th>Letztes Verbrechen</th>
+													<th>Level der gesuchten</th>
+												</tr>
+											</thead>
+											<tbody id="mdc_warrants_list">
+						
+											</tbody>
+											
+										</table>
+										<div id="no_warrant" style="display:none;" >
+											<div class="alert alert-secondary" role="alert">
+											  Zur Zeit nicht gesucht!
+											</div>
+										</div>
+									</div>
+							   
+									<div id="mdc_calls_911_page" style="display:none">
+									  <table class="table">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Entfernung</th>
+													<th>#</th>
+												</tr>
+											</thead>
+											<tbody id="mdc_calls_911">
+			
+											</tbody>
+											
+										</table>
+										<div id="no_call_911" style="display:none;" >
+											<div class="alert alert-secondary" role="alert">
+											  Zur Zeit nicht gesucht!
+											</div>
+										</div>
+									</div>
+									
+									<div id="mdc_charges_page" style="display:none">
+										<div class="form-group"><input type="text" class="form-control" id="mdc_charges_searchbox" onkeyup="searchFunction()" placeholder="Search for charge.."></div>
+										<div class="col-xs-2">
+											<div id="mdc_charges_goback" class="btn btn-default btn-sm">Go back</div>
+										</div>
+										<div class="col-xs-2">
+											<div id="calculate_charge_btn" style="color:#000" class="btn btn-primary btn-sm">Gebühren hinzufügen für [NONE]</div>
+										</div>
+										<label id="charge_jailtime_text"></label><br><br>
+										<div class="btn-group">
+											<div id="add_access_modifier" style="color:#000" class="btn btn-warning btn-xs">Zubehör zu einem Verbrechen</div>
+											<div id="add_attempt_modifier" style="color:#000" class="btn btn-warning btn-xs">Versuch eines Verbrechens</div>
+											<div id="add_aggr_modifier" style="color:#000" class="btn btn-warning btn-xs">Verschärftes Verbrechen</div>
+											<div id="add_gov_modifier" style="color:#000" class="btn btn-warning btn-xs">Verbrechen gegen einen Regierungsangestellten</div>
+										</div>
+										<br><label id="charge_descript_text"></label>
+										<div class="col-xs-6">
+											<h2 class="sub-header" style="color:#00f">Found charges</h2>
+											<div class="table-responsive">
+												<table class="table table-striped" id="mdc_charges_table_search">
+													<thead>
+														<tr>
+															<th>Charge</th>
+															<th>Action</th>
+														</tr>
+													</thead>
+													<tbody id="mdc_charges_searchtable"></tbody>
+												</table>
+											</div>
+										</div>
+										<div class="col-xs-6">
+											<h2 class="sub-header" style="color:green">Added Charges</h2>
+											<div class="table-responsive">
+												<table class="table table-striped">
+													<thead>
+														<tr>
+															<th>Charge</th>
+															<th>Action</th>
+														</tr>
+													</thead>
+													<tbody id="mdc_charges_addedtable"></tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel-footer"><button id="main_mdc_close" class="btn btn-default">Schliessen</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	 <script>
+	 
+		var suspect_name = null;
+		function HideAllPages() {
+			$('#main_page_title').hide();
+			$('#mdc_search_page').hide();
+			$('#mdc_table_page').hide();
+			$('#mdc_charges_page').hide();
+			$('#found_search').hide();
+			$('#found_vehicle_search').hide();
+			$('#mdc_warrants_page').hide();
+			$('#no_warrant').hide();
+			$('#mdc_calls_911_page').hide();
+			
+		}
+		$(document).ready(function() {
+			$("#mdc_record_search").click(function() {
+				HideAllPages();
+				$('#mdc_search_page').show();
+			});
+			$("#mdc_plate_search").click(function() {
+				HideAllPages();
+				$('#mdc_table_page').show();
+			});
+			$("#mdc_bt_check_player").click(function() {
+				var result = document.getElementById("mdc_search_plateperson").value;
+				mp.trigger('mdc_checar_player', result);
+				
+			});
+			$("#mdc_print_btn").click(function() {
+				if(suspect_name == null) return; 
+				mp.trigger('mdc_print_suspect', suspect_name);
+				
+			});
+			$("#mdc_print_prison_time_btn").click(function() {
+				if(suspect_name == null) return; 
+				mp.trigger('mdc_print_prison', suspect_name);
+				
+			});
+			
+			$("#mdc_bt_check_vehicle").click(function() {
+				
+				var result = document.getElementById("mdc_search_plate").value;
+				mp.trigger('mdc_checar_vehicle', result);
+				
+			});
+			
+			
+			$("#mdc_warrants").click(function() {
+				HideAllPages();
+				$('#mdc_warrants_page').show();
+				mp.trigger('mdc_warrant_list');
+			});
+			
+			$("#mdc_activecalls").click(function() {
+				HideAllPages();
+				$('#mdc_calls_911_page').show();
+				mp.trigger('mdc_911_list');
+			});
+			
+			
+			
+			$("#main_mdc_close").click(function() {
+				mp.trigger('Destroy_Character_Menu');
+				
+			});
+		});
+		
+		function CheckPlayer(data) {
+			$("#mdc_search_charges").empty();
+			$("#not_found").empty();
+			reader = JSON.parse(data);
+			if(reader.length > 0) {
+				$('#found_search').show();
+				suspect_name = reader[0].Suspect;
+				document.getElementById("mdc_search_info").innerHTML = suspect_name;
+				for(let i = 0; i < reader.length; i++) {
+				
+					if(reader[i].Price == 0)
+					{
+						$("#mdc_search_charges").append('<tr><td>'+reader[i].Data+'</td><td>'+reader[i].Charge+'</td><td><a href="#" class="badge badge-success">Kriminalität</a></td><td>'+reader[i].Office+'</td></tr>');
+					} else {
+						$("#mdc_search_charges").append('<tr><td>'+reader[i].Data+'</td><td>'+reader[i].Charge+'</td><td><a href="#" class="badge badge-success">Fein - Feinpreis: '+reader[i].Price+'</a></td><td>'+reader[i].Office+'</td></tr>');
+					}
+				}
+			}
+			else {
+				suspect_name = null;
+				$('#found_search').hide();
+				$("#not_found").append('<div class="alert alert-danger" role="alert">Wir können diesen Namen nicht in unserer Datenbank finden oder der Player-Datensatz ist sauber.</div>');
+			}
+		}
+		
+		function CheckWantedList(data) {
+			$("#mdc_warrants_list").empty();
+			reader = JSON.parse(data);
+			if(reader.length > 0) {
+				$('#no_warrant').hide();
+				for(let i = 0; i < reader.length; i++) {
+					$("#mdc_warrants_list").append('<tr><td>'+reader[i].Suspect+'</td><td>'+reader[i].LastCrime+'</td><td>'+reader[i].Wanted+'</td></tr>');
+				}
+			}
+			else {
+				$('#no_warrant').show();
+			}
+		}
+		
+		function CheckVehicle(data) {
+			$("#vehicle_not_found").empty();
+			reader = JSON.parse(data);
+			if(reader.length > 0) {
+				$('#found_vehicle_search').show();
+
+				 //alert(""+reader[0].Model+"");
+				 
+				document.getElementById("vehicle_img").src = "http://cdn.faction-life.ml/veh/"+reader[0].Model+".png";
+				   
+				 
+				document.getElementById("mdc_search_vehicle_info").innerHTML = reader[0].Model;
+				document.getElementById("vehicle_owner").innerHTML = reader[0].Owner;
+				document.getElementById("vehicle_model").innerHTML = reader[0].Model;
+				document.getElementById("vehicle_plate").innerHTML = reader[0].Plate;
+				if(reader[0].Ticket == 0) {
+					document.getElementById("vehicle_ticket").innerHTML = "Nichts vorhanden";
+				}
+				else {
+					document.getElementById("vehicle_ticket").innerHTML = "$" + reader[0].Ticket + " in Geldstrafen";
+				}
+
+	
+			}
+			else {
+				$('#found_vehicle_search').hide();
+				$("#vehicle_not_found").append('<div class="alert alert-danger" role="alert">Hoppla! Wir konnten dieses Fahrzeugkennzeichen nicht in unserer Datenbank finden.</div>');
+			}
+		}
+		
+		function Check911List(data) {
+			$("#mdc_calls_911").empty();
+			reader = JSON.parse(data);
+			if(reader.length > 0) {
+				$('#no_call_911').hide();
+				
+
+				for(let i = 0; i < reader.length; i++) {
+					$("#mdc_calls_911").append('<tr><td>'+reader[i].Player+'</td><td>'+reader[i].Distance+' Meter von Ihnen entfernt</td><td><div class="btn-group" role="group"><button id="call_911_active_'+reader[i].Index+'" type="button" class="btn btn-success">Anruf annehmen</button><button id="call_911_refuse_'+reader[i].Index+'" type="button" class="btn btn-danger">Anruf ablehnen</button></div></td></tr>');
+					
+					$('#call_911_active_'+reader[i].Index).click(function() {
+						mp.trigger('mdc_911_accept', reader[i].Index);
+					});
+					
+					$('#call_911_refuse_'+reader[i].Index).click(function() {
+						mp.trigger('mdc_911_refuse', reader[i].Index);
+					});
+					
+				}
+			}
+			else {
+				$('#no_call_911').show();
+			}
+		}
+
+	 </script>
+	</body>
+</html>

@@ -1,0 +1,486 @@
+@font-face {
+    font-family: 'OSB';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSE';
+    src: url('../fonts/OpenSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSS';
+    src: url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BNT';
+    src: url('../fonts/bnt.ttf') format('truetype');
+}
+
+body {background: transparent;background-repeat: no-repeat;background-size: cover;opacity: 0.95;}
+
+#voice{
+	background-image: url("../laut0.png");
+  	background-repeat: no-repeat;
+	bottom: 45.7%;
+	left: 97.7%;
+}
+
+.icon{ 
+	-webkit-user-select: none;
+	visibility: visible;
+	position: absolute;
+	height: 4%;
+	width: 15%;
+	background-size:contain;
+}
+
+.dreieck {
+    width: 0vw;
+    height: 0vw;
+    border-left: 0px solid transparent;
+    border-right: 1vw solid transparent;
+    border-bottom: 1vw solid #09eb94;
+    transform: rotate(180deg);
+    right: 0.2vw;
+    position: absolute;
+    top: 0.2vw;
+  }
+
+.boxlife {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 8vw;
+	height: 2vw;
+	top: 2.8vw;
+	left: 16.5vw;
+	border: 2px solid rgb(72, 103, 99);
+	display: none;
+}
+.boxarmor {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 8vw;
+	height: 2vw;
+	top: 5.1vw;
+	border: 2px solid rgb(72, 103, 99);
+	left: 16.5vw;
+	display: none;
+}
+.boxcash {
+    background: rgba(32, 47, 45, 0.90);
+    position: absolute;
+    width: 10.3vw;
+    height: 1.5vw;
+    top: 50.5vw;
+	border-left: 5px solid #e4e34c;
+    left: 16.5vw;
+}
+.boxbank {
+    background: rgba(32, 47, 45, 0.90);
+    position: absolute;
+    width: 10.3vw;
+    height: 1.5vw;
+    top: 53.5vw;
+	border-left: 5px solid #e4e34c;
+    left: 16.5vw;
+}
+.boxbitcoin {
+	background: rgba(32, 47, 45, 0.90);
+    position: absolute;
+    width: 5.2vw;
+    height: 2vw;
+    top: 7.4vw;
+    border: 2px solid rgb(72, 103, 99);
+    left: 9.6vw;
+}
+.iconlife {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 2vw;
+	height: 2vw;
+	top: 2.8vw;
+	border: 2px solid rgb(72, 103, 99);
+	left: 16vw;
+	display: none;
+}
+.iconarmor {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 2vw;
+	height: 2vw;
+	top: 5.1vw;
+	border: 2px solid rgb(72, 103, 99);
+	left: 16vw;
+	display: none;
+}
+.boxlevel {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 6.7vw;
+	height: 3.4vw;
+	top: 3.8vw;
+	border: 2px solid rgb(72, 103, 99);
+	left: 18.3vw;
+}
+.boxfood {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 10.3vw;
+	height: 1.5vw;
+	top: 46.5vw;
+	border-left: 5px solid #e4e34c;
+	left: 16.5vw;
+}
+.boxdrink {
+	background: rgba(32, 47, 45, 0.90);
+	position: absolute;
+	width: 10.3vw;
+	height: 1.5vw;
+	top: 48.5vw;
+	border-left: 5px solid #e4e34c;
+	left: 16.5vw;
+}
+
+.inlinelife {
+	background: #2e5747ab;
+	position: absolute;
+	width: 7.6vw;
+	height: 1.6vw;
+	top: 0.2vw;
+	left: 0.2vw;
+}
+
+.inlife {
+	background: #09eb95;
+    position: absolute;
+    width: 74%;
+    height: 1.6vw;
+    transform: rotate(180deg);
+    right: 0vw;
+}
+
+.inlinearmor {
+	background: #2e5a5bab;
+	position: absolute;
+	width: 7.6vw;
+	height: 1.6vw;
+	top: 0.2vw;
+	left: 0.2vw;
+}
+
+.inarmor {
+	background: #0ad4ec;
+    position: absolute;
+    width: 24%;
+    height: 1.6vw;
+    transform: rotate(180deg);
+    right: 0vw;
+}
+
+.inlinefood {
+    /* background: #695530ab; */
+    position: absolute;
+    width: 8.6vw;
+    height: 1.3vw;
+    top: 0.25vw;
+    left: 1.5vw;
+}
+
+.inlinedrink {
+    /* background: #2e5a5bab; */
+    position: absolute;
+    width: 8.6vw;
+    height: 1.3vw;
+    top: 0.21vw;
+    left: 1.5vw;
+}
+
+.icon1 {
+	color: #fff;
+    font-size: 1.6vw;
+    position: absolute;
+    left: 0.4vw;
+	height: 50%;
+    top: -0.35vw;
+}
+
+.icon2 {
+	color: #fff;
+    font-size: 1.6vw;
+    position: absolute;
+    left: 0.2vw;
+    top: -0.11vw;
+}
+
+.icon3 {
+	color: #fff;
+	font-size: 1vw;
+    width: 1.6vw;
+    position: absolute;
+    left: 0.2vw;
+    top: 0.09vw;
+}
+
+.icon4 {
+    color: #fff;
+    width: 1vw;
+    position: absolute;
+    left: 0.2vw;
+    top: 0.15vw;
+}
+
+.icon5 {
+	color: #fff;
+    font-size: 1vw;
+    position: absolute;
+    left: 0.2vw;
+    top: 0.05vw;
+}
+
+.icon6 {
+	color: #fff;
+    font-size: 1vw;
+    position: absolute;
+    left: 0.4vw;
+    top: 0.05vw;
+}
+
+.infood {
+	/* background: #ec890a; */
+	position: absolute;
+	width: 99.5%;
+	height: 1.25vw;
+	left: 0vw;
+	top: -0.11vw;
+}
+
+.indrink {
+	/* background: #0ad4ec; */
+	position: absolute;
+	width: 99.5%;
+	height: 1.25vw;
+	left: 0vw;
+	top: -0.11vw;
+}
+
+#K {
+	position: absolute;
+    right: 0.3vw;
+    font-size: 1.4vw;
+    top: -0.25vw;
+    transform: skew(-4deg);
+    color: #11ea99;
+}
+
+#lv {
+    position: absolute;
+    font-size: 2vw;
+    top: 0.3vw;
+    color: #fff;
+    left: 1.7vw;
+}
+
+#level {
+    position: absolute;
+    font-size: 2vw;
+    top: 0.3vw;
+    color: #fff;
+    left: 3.5vw;
+}
+
+#cash {
+    color: #fff;
+    right: 1.4vw;
+    font-size: 2vw;
+    top: -0.11vw;
+}
+
+#bank {
+    color: #fff;
+    right: 1.4vw;
+    font-size: 2vw;
+    top: -0.11vw;
+}
+
+#bitconnect {
+	color: #fff;
+    right: 0.5vw;
+    font-size: 2vw;
+    top: -0.1vw;
+}
+
+.inlinelevel {
+    background: #16ec99;
+    position: absolute;
+    width: 80%;
+    height: 0.3vw;
+    left: 0vw;
+    bottom: 0.1vw;
+}
+
+.bg {
+    background: rgba(19, 25, 25, 0.86);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0vw;
+    top: 0vw;
+}
+
+.box {
+	background: transparent;
+	position: absolute;
+	width: 25vw;
+	height: 10vw;
+	right: 0.5vw;
+	bottom: 0vw;
+}
+
+  }
+
+  input, textarea, select, button {
+    text-rendering: auto;
+    color: #fff;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 3vw;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0.4vw;
+    font: 400 1vw OSL;
+    background: #202f2d;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: transparent;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    padding: 1vw;
+    border-width: 0.1vw;
+    border-style: solid;
+    border-color: #2e413f;
+    border-image: initial;
+    border-radius: 2vw;
+    margin-left: 0.5vw;
+    width: 25vw;
+    transition: 0.2s;
+    opacity: 0.5;
+    background: #202f2d;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0px;
+}
+
+input:focus > i {
+    color: #fff;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    opacity: 1;
+    border-color: #09eb94;
+}
+
+#pimmel1 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2vw;
+    left: 2vw;
+    top: 10.4vw;
+}
+
+#pimmel2 {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2vw;
+    left: 2vw;
+    top: 14.7vw;
+    transition: 0.2s;
+}
+
+#role {
+    color: #00ec90;
+    background: rgba(32, 47, 45, 0.90);
+    width: 6.7vw;
+    height: 2vw;
+    top: 7.5vw;
+    border: 2px solid rgb(72, 103, 99);
+    left: 18.3vw;
+    -webkit-appearance: none;
+    -webkit-rtl-ordering: unset;
+    transition: 0.2s;
+    font-family: 'BNT';
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    opacity: unset;
+    line-height: 1.3;
+}
+
+.text1 {
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    transition: 0.2s;
+    opacity: 1;
+    font-family: 'BNT';
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    top: 1.2vw;
+    left: 7.7vw;
+    color: #00ec90;
+    transform: skew(-5deg);
+}
+
+.text2 {
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    transition: 0.2s;
+    opacity: 1;
+    font-family: 'BNT';
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+    color: #fff;
+    right: 3.9vw;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.3), 0 1px rgba(0, 0, 0, 0.3), 1px 0 rgba(0, 0, 0, 0.3), 0 -1px rgba(0, 0, 0, 0.3);
+    top: 1.2vw;
+    left: 13.7vw;
+}
+
+span {
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    transition: 0.2s;
+    opacity: 1;
+    font-family: 'BNT';
+    text-align: center;
+    font-size: 1.5vw;
+    position: absolute;
+}
+
+.logo {
+    width: 12vw;
+    opacity: 1;
+    z-index: 1000;
+    position: absolute;
+    left: 43vw;
+    top: 2vw;
+}

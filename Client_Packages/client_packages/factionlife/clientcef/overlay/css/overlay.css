@@ -1,0 +1,55 @@
+         * {
+         border-radius: 0px!important;
+         }
+         body {
+         background: none!important;
+         font-family: 'Fjalla One', sans-serif;
+         user-select: none;
+         }
+         .panel {
+         margin-top: 10px; border-radius: 0px; color: #fff;
+         background: none!important;
+		 width: 120px;
+		 height: 20px;
+		 padding-right: auto;
+         }
+         .media-body {
+         background-color: rgba(0, 0, 0, 0.4);
+         }
+         .font-big {
+         font-size: 13px;
+         }
+         .pad-all {
+         padding: 1px 5px;
+         }
+         .col-md-2 {
+         width: 14%!important;
+         }
+         .col-md-10 {
+         width: 85%!important;
+         }
+         h5 {
+         color: #fff;
+         }
+         .container2 {
+         position: relative;
+         }
+         .bottomright {
+         position: absolute;
+         bottom: 4px;
+         right: 0px;
+         }
+         .container3 {
+         position: relative;
+         }
+         .center {
+         position: absolute;
+         bottom: 8px;
+         right: 0px;
+         }
+		 .checked {
+		color: #FF0000;
+		}
+		 #container {
+		 padding-left: 50px;
+		}	

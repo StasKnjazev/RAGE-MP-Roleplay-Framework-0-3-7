@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <!-- Copyright © 2019 DerStr1k3r. All rights reserved. -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/nifty.min.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	  <link rel="stylesheet" href="./css/styles.css" />
+	  <link href="./css/hud.css" rel="stylesheet">
+      <style>
+         * {
+         border-radius: 0px!important;
+         }
+         body {
+         background: none!important;
+         font-family: 'Fjalla One', sans-serif;
+         user-select: none;
+         }
+         .panel {
+         margin-top: 10px; border-radius: 0px; color: #fff;
+         background: none!important;
+		 width: 120px;
+		 height: 20px;
+		 padding-right: auto;
+         }
+         .media-body {
+         background-color: rgba(0, 0, 0, 0.4);
+         }
+         .font-big {
+         font-size: 13px;
+         }
+         .pad-all {
+         padding: 1px 5px;
+         }
+         .col-md-2 {
+         width: 14%!important;
+         }
+         .col-md-10 {
+         width: 85%!important;
+         }
+         h5 {
+         color: #fff;
+         }
+         .bottomright {
+         position: absolute;
+         bottom: 4px;
+         right: 0px;
+         }
+         .center {
+			position: absolute;
+			bottom: 8px;
+			right: 0px;
+         }
+		 .checked {
+			color: #FF0000;
+		}
+	
+#on_hands_money {
+    color: #fff;
+    right: 1.4vw;
+    font-size: 1.4vw;
+    top: -0.25vw;
+}
+
+#on_bank_money {
+    color: #fff;
+    right: 1.4vw;
+    font-size: 1.4vw;
+    top: -0.25vw;
+}
+	
+      </style>
+   </head>
+   <body>
+
+	<div class="boxcash">
+		<div class="icon3">
+			<i class="fas fa-wallet"></i>
+		</div>
+		<span id="on_hands_money">20.00</span>
+		<span id="K">$</span>
+	</div>
+	
+	<!-- <div class="boxbank"> -->
+	<!-- <div class="icon3"><i class="fas fa-university"></i></div> -->
+	<!-- <span id="on_bank_money">123</span> -->
+	<!-- <span id="K">B</span> -->
+	<!-- </div> -->
+   
+	<!-- <div class="boxcontainercash"> -->
+		<!-- <div class="icon1"><i class="fas fa-wallet"></i></div>    -->
+		<!-- <span id="bank"><div id="bank on_hands_money">0</div></span> -->
+	<!-- </div> -->
+	<!-- <div class="boxcontainerbank"> -->
+		<!-- <div class="icon1"><i class="fas fa-wallet"></i></div>    -->
+		<!-- <span id="cash"><div id="cash on_bank_money">0</div></span> -->
+	<!-- </div> -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+
+	<script>
+		var current_hands = 0;
+		var current_bank = 0;
+		function SetPlayerMoney(hands, bank) {
+
+			if(current_hands != hands)
+			{
+			$('#on_hands_money').animateNumber({
+				number: hands,
+				numberStep: function(now, tween) {
+				var floored_number = Math.floor(now),
+				target = $(tween.elem);
+				if(hands >= 0)
+						{
+							$("#on_hands_money").css("color", "#fff");
+						}
+				else {
+							$("#on_hands_money").css("color", "#C85052");
+						}
+						target.text(floored_number);
+			}
+			});
+			current_hands = hands;
+		}
+			if(current_bank != bank)
+			{
+				$('#on_bank_money').animateNumber({
+					number: bank,
+					numberStep: function(now, tween) {
+					var floored_number = Math.floor(now),
+					target = $(tween.elem);
+					if(bank >= 0)
+							{
+								$("#on_bank_money").css("color", "#fff");
+							}
+					else {
+								$("#on_bank_money").css("color", "#C85052");
+							}
+							target.text(floored_number);
+				}
+				});
+					current_bank = bank;
+			}
+         }
+		 function SetPlayerCredits(credits) { 
+			document.getElementById('on_credits').innerHTML = credits;
+		 }
+         
+         function SetPlayerTime(hour) {
+         	 document.getElementById('hour').innerHTML = hour;
+         }
+      </script>
+   </body>
+</html>

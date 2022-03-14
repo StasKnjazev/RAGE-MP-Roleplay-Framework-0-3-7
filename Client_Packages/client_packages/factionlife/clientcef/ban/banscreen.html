@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!--CSS-->
+    <link rel="stylesheet" href="style.css" />
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div class="window">
+        <!--Headline-->
+        <h1>Spielausschluss</h1>
+        <hr />
+        <p>Der Ban war ungerechtfertigt? Melde dich im Teamspeak.<p>
+    </div>
+    <script>
+        function UpdateBanData(adminName, banDate, reason, expireDate) {
+            document.getElementById("text.adminname").innerHTML = adminName;
+            document.getElementById("text.date").innerHTML = banDate;
+            document.getElementById("text.reason").innerHTML = reason;
+            document.getElementById("text.expiredate").innerHTML = expireDate;
+        }
+    </script>
+</body>
+</html>

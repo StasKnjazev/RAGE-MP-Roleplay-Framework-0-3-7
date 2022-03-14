@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "g:\\Developer\\Public_Source\\Source\\RageMP\\RageMP.csproj": {}
+  },
+  "projects": {
+    "g:\\Developer\\Public_Source\\Source\\RageMP\\RageMP.csproj": {
+      "version": "6.6.0",
+      "restore": {
+        "projectUniqueName": "g:\\Developer\\Public_Source\\Source\\RageMP\\RageMP.csproj",
+        "projectName": "Independence",
+        "projectPath": "g:\\Developer\\Public_Source\\Source\\RageMP\\RageMP.csproj",
+        "packagesPath": "C:\\Users\\DerStr1k3r\\.nuget\\packages\\",
+        "outputPath": "g:\\Developer\\Public_Source\\Source\\RageMP\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\DerStr1k3r\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "targetAlias": "netcoreapp2.2",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "targetAlias": "netcoreapp2.2",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.7, )",
+              "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "System.Runtime": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

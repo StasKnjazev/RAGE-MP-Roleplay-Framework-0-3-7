@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="background-color: transparent">
+<head>
+    <title>DevExtreme Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="jquery.min.js"></script>
+<script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery-3.1.0.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="css/dx.light.css" />
+    <script src="js/dx.all.js"></script>
+    <link rel="stylesheet" type ="text/css" href ="styles.css" />
+    <script src="index.js"></script>
+</head>
+<body class="dx-viewport" style="background-color: transparent">
+    <div class="demo-container">
+        <div id="gauge-demo">
+            <div id="gauge-container">
+                <div class="left-section">
+					<img src="fuel.png">
+					<span style="opacity:0;">-</span>
+                    <font color="black" size="3"><span id="fuel">100</span> L</font>
+					<br>
+					<img src="engine.png">
+                </div>
+                <div class="center-section">
+                    <div class="speed-value">
+                        <span id="text_speed">157</span>km/h 
+                    </div>
+                    <div id="speed-gauge"></div>
+                    <div id="fuel-gauge"></div>
+                </div>
+                <div class="right-section">
+
+                </div>
+            </div>
+            <div id="slider"></div>
+        </div>
+    </div>
+	<script>
+		$(function() {
+    var gaugeOptions = {
+        scale: {
+            startValue: 0, 
+            endValue: 100,
+            tickInterval: 10
+        },
+        valueIndicator: {
+            color: "#f05b41"
+        },
+        value: 20,
+        size: {
+            width: 90,
+            height: 90 
+        }
+    };
+
+    var speedGauge = $("#speed-gauge").dxCircularGauge({
+        geometry: {
+            startAngle: 225,
+            endAngle: 315
+        },
+        scale: {
+            startValue: 20,
+            endValue: 250,
+            tickInterval: 20,
+            minorTickInterval: 0.3
+        },
+        valueIndicator: {
+            type: "twoColorNeedle",
+            color: "transparent",
+            secondFraction: 0.24,
+            secondColor: "#f05b41",
+        },
+        value: 40,
+        size: {
+            width: 260 
+        }
+    }).dxCircularGauge("instance");
+
+    $("#coolant-gauge").dxCircularGauge($.extend(true, {}, gaugeOptions, {
+        geometry: { startAngle: 180, endAngle: 90 }
+    }));
+
+    $("#psi-gauge").dxCircularGauge($.extend(true, {}, gaugeOptions, {
+        scale: { startValue: 100, endValue: 0 },
+        geometry: { startAngle: 90, endAngle: 0 }
+    }));
+
+    $("#rpm-gauge").dxCircularGauge($.extend(true, {}, gaugeOptions, {
+        scale: { startValue: 100, endValue: 0 },
+        geometry: { startAngle: -90, endAngle: -180 }
+    }));
+
+    $("#instant-fuel-gauge").dxCircularGauge($.extend(true, {}, gaugeOptions, {
+        geometry: { startAngle: 0, endAngle: -90 }
+    }));
+
+    var fuelGauge = $("#fuel-gauge").dxLinearGauge({
+        scale: {
+            startValue: 0,
+            endValue: 50,
+            tickInterval: 25,
+            minorTickInterval: 12.5,
+            minorTick: {
+                visible: true
+            },
+            label: {
+                visible: false
+            }
+        },
+        valueIndicator: {
+            color: "#f05b41",
+            size: 8,
+            offset: 7 
+        },
+        value: 40.4,
+        size: {
+            width: 90,
+            height: 20
+        }
+    }).dxLinearGauge("instance");
+});
+	function setSpeed(speed) {
+		$("#speed-gauge").dxCircularGauge("instance").value(speed);
+		$(".speed-value > span").text(speed);
+	}
+	</script>
+</body>
+</html>
+

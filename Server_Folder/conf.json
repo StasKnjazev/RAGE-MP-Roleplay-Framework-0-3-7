@@ -1,0 +1,18 @@
+{
+	"maxplayers" : 300,
+	"name" : "[GER/Voice] xxx", 
+	"gamemode" : "roleplay", 
+	"stream-distance" : 250.0,
+	"announce" : true,
+	"port": 22005,
+	"sync-rate" : 250,
+	"encryption" : true,
+	"enable-http-security" : true,
+	"disallow-multiple-connections-per-ip" : false,
+	"url" : "xxx",
+	"language" : "ge",
+	"allow-client-mods" : false,
+	"csharp" : true,
+	"voice-chat" : true,
+	"voice-chat-sample-rate" : 48000
+}

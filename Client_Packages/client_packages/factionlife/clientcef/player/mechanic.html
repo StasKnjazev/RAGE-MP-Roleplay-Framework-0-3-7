@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<!-- Stylesheets (Semantic, Font Awesome, and Fonts -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css" integrity="sha256-oDCP2dNW17Y1QhBwQ+u2kLaKxoauWvIGks3a4as9QKs=" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.css">
+
+		    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.1017/styles/kendo.material.mobile.min.css" />
+
+    <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.3.1017/js/kendo.all.min.js"></script>
+	
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		  <!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style class="text/css">
+		.ui.hiddden.divider {
+			content: "\A";
+		}
+		body {
+			background-color: rgba(0,0,0,0);
+		}
+		.setup-label {
+			float: right;
+		}
+		</style>
+	</head>
+
+	<body>
+		<img src="https://cdn.discordapp.com/attachments/279556873886105600/445308611930095626/rageroleplay.png" />
+
+		<div class="ui one column grid">
+			<div class="four wide column">
+				<div class="ui segment">
+					<div class="ui red attached segment">
+						<div class="ui red ribbon label">Step 1</div>
+						<label class="ui center aligned" id="title">Character Information</label>
+						<br />
+						<br />
+							
+						<form class="ui form">
+							<div class="field">
+								<input type="text" name="first-name" id="creation_forename" placeholder="First Name">
+							</div>
+							<div class="field">
+								<input type="text" name="last-name" id="creation_surname" placeholder="Last Name">
+							</div>
+						  	<div class="field">
+							  <div class="ui selection dropdown" id="creation_gender">
+								  <input type="hidden" name="gender">
+								  	<i class="dropdown icon"></i>
+									<div class="default text">Gender</div>
+									<div class="menu">
+										  <div class="item" data-value="1">Male</div>
+										  <div class="item" data-value="0">Female</div>
+								  </div>
+							  </div>
+						  </div>
+
+						  <div class="ui error message"></div>
+					</div>
+
+					<div class="ui attached segment">
+						<div class="ui red ribbon label">Step 2</div>
+						<br />
+
+						<label class="ui center aligned">Father</label>
+						<div class="setup-label ui black label" id="display-base"></div>
+						<div class="ui red range" id="range_base"></div>
+						
+						<label class="ui center aligned">Mother</label>
+						<div class="setup-label ui black label" id="display-base2"></div>
+						<div class="ui red range" id="range_base2"></div>
+						
+						<label class="ui center aligned">Parent Blend</label>
+						<div class="ui red range" id="range_baseblend"></div>
+
+						<label class="ui center aligned">Skin Tone</label>
+						<div class="setup-label ui black label" id="display-skin"></div>
+						<div class="ui red range" id="range_skin"></div>
+
+						<label class="ui center aligned">Eye Color</label>
+						<div class="setup-label ui black label" id="display-eyes"></div>
+						<div class="ui red range" id="range_eyes"></div>
+
+						<label class="ui center aligned">Hair</label>
+						<div class="setup-label ui black label" id="display-hair"></div>
+						<div class="ui red range" id="range_hair"></div>
+
+						<label class="ui center aligned">Hair Color</label>
+						<div class="setup-label ui black label" id="display-haircolor"></div>
+						<div class="ui red range" id="range_haircolor"></div>
+
+						<label class="ui center aligned">Hair Highlights</label>
+						<div class="setup-label ui black label" id="display-haircolor2"></div>
+						<div class="ui red range" id="range_haircolor2"></div>
+
+						<label class="ui center aligned">Eyebrows</label>
+						<div class="setup-label ui black label" id="display-eyebrows"></div>
+						<div class="ui red range" id="range_eyebrows"></div>
+
+						<label class="ui center aligned">Beard</label>
+						<div class="setup-label ui black label" id="display-beard"></div>
+						<div class="ui red range" id="range_beard"></div>
+					</div>
+
+					<div class="ui two bottom attached buttons">
+						<div class="ui red button" id="charcreation_back">Back</div>
+						<div class="ui green button" id="charcreation_next">Next</div>
+					</div>
+				</div>
+			</div>
+			<div class="right floated four wide column">
+				<div class="ui segments">
+				
+				
+					<div class="ui red segment">
+						<h3 class="ui center aligned header">
+							Personalização de Veículos
+							
+						</h3>
+					</div>
+					
+
+
+<div class="ui tabular menu">
+	<div class="ui pointing secondary menu">
+	  <a class="active item" data-tab="tab-name">Cores</a>
+	  <a class="item" data-tab="tab-name2">Componentes</a>
+	  <a class="item" data-tab="third">Rodas</a>
+	  <a class="item" data-tab="third">Placas</a>
+	</div>
+</div>
+
+
+<div class="ui active tab" data-tab="tab-name">
+<h4 class="ui horizontal header divider">Neon Customization</h4>
+
+ <centeR>
+
+    <div class="demo-section k-content">
+        <label for="colorpicker">Selecione a cor do neon <font color="#FFF" style="opacity:0;">></font></label>
+        <input id="colorpicker" value="#00f" />
+    </div>
+	
+
+<h4 class="ui horizontal header divider">Pintura Personalizada</h4>
+	    <centeR>
+    <div class="demo-section k-content">
+        <label for="colorpicker2">Pintura personalizada primária <font color="#FFF" style="opacity:0;">></font></label>
+        <input id="colorpicker2" value="#00f" />
+    </div><br>
+    <div class="demo-section k-content">
+        <label for="colorpicker3">Pintura personalizada secúndaria <font color="#FFF" style="opacity:0;">></font></label>
+        <input id="colorpicker3" value="#00f" />
+    </div>
+	</center>
+	
+</div>	
+ 
+
+<h4 class="ui horizontal header divider">Pintura metálica</h4>
+<center>
+Pintura Primaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+<br><br>
+Pintura Secundaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+</center>
+<h4 class="ui horizontal header divider">Pintura fosca</h4>
+<center>
+Pintura Primaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+<br><br>
+Pintura Secundaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+</center>
+<h4 class="ui horizontal header divider">Pintura Cromada</h4>
+<center>
+Pintura Primaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+<br><br>
+Pintura Secundaria<br><br>
+<div class="ui buttons">
+  <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Voltar
+  </button>
+  <button class="ui button">
+
+    Amarelo
+	 
+  </button>
+  <button class="ui right labeled icon button">
+    Proxima
+    <i class="right chevron icon"></i>
+  </button>
+</div>
+</center>
+	<br><br>
+</div>
+    
+    <script>
+        var colorpicker = $("#colorpicker").kendoColorPicker({
+            toolIcon: "k-i-foreground-color",
+			change: function(e) {
+				console.log("The picked color is ", e.value);
+			  },
+			  select: function(e) {
+				console.log("The selected color is ", e.value);
+			  }
+        }).data("kendoColorPicker");
+        var colorpicker = $("#colorpicker2").kendoColorPicker({
+            toolIcon: "k-i-foreground-color",
+			change: function(e) {
+				console.log("The picked color is ", e.value);
+			  },
+			  select: function(e) {
+				console.log("The selected color is ", e.value);
+			  }
+        }).data("kendoColorPicker");
+        var colorpicker = $("#colorpicker3").kendoColorPicker({
+            toolIcon: "k-i-foreground-color",
+			change: function(e) {
+				console.log("The picked color is ", e.value);
+			  },
+			  select: function(e) {
+				console.log("The selected color is ", e.value);
+			  }
+        }).data("kendoColorPicker");
+
+    </script>
+
+
+	
+		<!-- Javascript (jQuery, Semantic) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js" integrity="sha256-RKNmL9+6j/3jB72OcIg8OQr91Bi4OgFPnKQOFS1O+fo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui-range@1.0.1/range.js"></script>
+		<script>
+		$('.tabular.menu .item').tab();
+	
+		
+		$('#creation_gender').dropdown({
+			onChange: function(val, data) { OnRangeChange("range_gender", val, data) }
+		});
+		$(document).ready(function() {
+			$('.ui.form').form({
+				fields: 
+				{
+					firstname: {
+						identifier: 'first-name',
+						rules: [{
+							type: 'empty',
+							prompt: 'Please enter a first name!'
+						}]
+					},
+					lastname: {
+						identifier: 'last-name',
+						rules: [{
+							type: 'empty',
+							prompt: 'Please enter a last name!'
+						}]
+					},
+					sex: {
+						identifier: 'gender',
+						rules: [{
+							type: 'minCount[1]',
+							prompt: 'Please select at least one gender!'
+						}]
+					}
+				}
+			});
+			
+			$("#charcreation_back").click(function() {
+				mp.trigger("ClientCharCreationBack");
+			});
+			
+			$("#charcreation_next").click(function() {
+				mp.trigger("ClientCharCreationNext", $("#creation_forename").val(), $("#creation_surname").val());
+			});
+
+			$("#charcreation_head").click(function() {
+				mp.trigger("cameraPointTo", 1);
+			});
+			
+			$("#charcreation_body").click(function() {
+				mp.trigger("cameraPointTo", 0);
+			});
+		});
+		
+		$('#range_elevation').range({
+			min: -2,
+			max: 1,
+			start: 0,
+			step: 1,
+			smooth: false,
+			onChange: function(val, data) { OnRangeChange("range_elevation", val, null) }
+		});
+
+		function OnRangeChange(id, val, data) {
+			console.log(id, val);
+			//mp.trigger("ClientOnRangeChange", id, val);
+		}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,256 @@
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\RageV.deps.json
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\RageV.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\RageV.pdb
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\bin\Debug\netcoreapp2.2\xxHash.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageV.dll
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageV.pdb
+c:\Users\DerStr1k3r\Downloads\RageV\RageMP\obj\Debug\netcoreapp2.2\RageMP.csprojAssemblyReference.cache
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.deps.json
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.pdb
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\xxHash.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.pdb
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.deps.json
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.pdb
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Bootstrapper.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Newtonsoft.Json.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Colorful.Console.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Ben.Demystifier.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\NeoSmart.Hashing.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\xxHash.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.json
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.dev.json
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Google.Protobuf.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\MySql.Data.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Permissions.dll
+c:\Users\DerStr1k3r\Downloads\Gamemode\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.deps.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.dev.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Google.Protobuf.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\MySql.Data.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Permissions.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Bootstrapper.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Newtonsoft.Json.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Colorful.Console.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Ben.Demystifier.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\NeoSmart.Hashing.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\xxHash.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.pdb
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.deps.json
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.json
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Faction-Life.pdb
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Google.Protobuf.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\MySql.Data.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Security.Permissions.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Bootstrapper.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Colorful.Console.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\Ben.Demystifier.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Users\Administrator\Desktop\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\xxHash.dll
+C:\Users\Administrator\Desktop\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+C:\Users\Administrator\Desktop\Source\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.dll
+C:\Users\Administrator\Desktop\Source\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\bin\Debug\netcoreapp2.2\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csprojAssemblyReference.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.deps.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.runtimeconfig.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.runtimeconfig.dev.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Faction-Life.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\bin\Debug\netcoreapp2.2\xxHash.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\Faction-Life.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_RageMP_11\RageMP\obj\Debug\netcoreapp2.2\RageMP.csprojAssemblyReference.cache
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.deps.json
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.runtimeconfig.json
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.runtimeconfig.dev.json
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.pdb
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+e:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\xxHash.dll
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\Kraftwerk.dll
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\Kraftwerk.pdb
+e:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.deps.json
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.runtimeconfig.json
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.runtimeconfig.dev.json
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Kraftwerk.pdb
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Colorful.Console.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.CSharp.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Ben.Demystifier.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\NeoSmart.Hashing.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\xxHash.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.pdb
+C:\Project RP Pack\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\Kraftwerk.dll
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\Kraftwerk.pdb
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+C:\Project RP Pack\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csprojAssemblyReference.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.deps.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.dev.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Source_REp\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csprojAssemblyReference.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.deps.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.dev.json
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.dll
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.pdb
+e:\Backup\Faction-Life-Reloaded\RageMP_RP_Alter_Mode\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.deps.json
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.json
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.runtimeconfig.dev.json
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Independence.pdb
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Google.Protobuf.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\MySql.Data.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Configuration.ConfigurationManager.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Cryptography.ProtectedData.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Security.Permissions.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\System.Text.Encoding.CodePages.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Newtonsoft.Json.dll
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.pdb
+g:\Developer\Public_Source\Source\RageMP\bin\Debug\netcoreapp2.2\Bootstrapper.xml
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfoInputs.cache
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.AssemblyInfo.cs
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CoreCompileInputs.cache
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.CopyComplete
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.dll
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\Independence.pdb
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.genruntimeconfig.cache
+g:\Developer\Public_Source\Source\RageMP\obj\Debug\netcoreapp2.2\RageMP.csproj.AssemblyReference.cache

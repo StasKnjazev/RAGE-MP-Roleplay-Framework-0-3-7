@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <script src="./js/fontawesome-all.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <title>Inventory</title>
+    <style>
+        body {
+            margin: 0;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            /* Non-prefixed version, currently
+                                            supported by Chrome and Opera 
+            background-image: url("./img/testbg2.jpg");*/
+            font-family: Calibri !important;
+        }
+
+        button {
+            outline: none;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        .wrapper {
+            position: absolute;
+            width: 80vw;
+            height: 60vh;
+            top: 20vh;
+            left: 20vw;
+            bottom: 20vh;
+            right: 3vw;
+            z-index: -1;
+        }
+
+        .player {
+			position: fixed;
+			display: inline-block;
+            top: 1vh;
+            left: 3vw;
+            width: 25vw;
+			height: auto;
+			background-color: rgb(11,11,11);
+			border: 1px solid rgb(35,35,35);
+			-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			color: white;
+            z-index: 2;
+
+        }
+
+        .equipment {
+			position: fixed;
+            top: 1vh;
+            left: 3vw;
+            width: 25vw;
+			height: 600px;
+			background-color: rgb(11,11,11);
+			border: 1px solid rgb(35,35,35);
+			-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			color: white;
+            display: none;
+        }
+        .container {
+            height: 100%;
+            margin-left: 25vw;
+        }
+
+        .backpack, .storage, .target {
+			position: fixed;
+            top: 1vh;
+            left: 30vw;
+            float: left;
+            width: 25vw;
+			height: 600px;
+			background-color: rgb(11,11,11);
+			border: 1px solid rgb(35,35,35);
+			-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			-moz-box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.36);
+			color: white;
+
+        }
+
+        .title {
+            padding-top: 0.6vh;
+            font-size: 2.5vh;
+            text-align: center;
+            border-top: 0.8vh solid #1c67c6;
+            padding-bottom: 0.5vh;
+            border-bottom: 0.2vh solid #616E7F;
+            color: white;
+        }
+
+        .stats {
+            position: relative;
+            text-align: center;
+            font-size: 1.5vh;
+            color: white;
+            padding-top: 0.6vh;
+            padding-bottom: 0.5vh;
+            border-bottom: 0.2vh solid #616E7F;
+        }
+
+        .statsfiller {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 60%;
+            background-color: rgba(97, 110, 127, 0.5);
+            z-index: -1;
+        }
+
+        .itemcontainer {
+            position: relative;
+            margin-left: 0.5vw;
+            margin-top: 1.2vh;
+            width: 95%;
+            height: 44.5vh;
+            border: 0.2vh solid #616E7F;
+            overflow-y: scroll;
+        }
+
+        .item {
+            background: #131313;
+			border-bottom: 1px solid #2b69d8;
+            position: relative;
+            padding: 0.5vh 0;
+            width: 100%;
+            max-width: 23.5vw;
+            margin: 0.1vh 0;
+            display: inline-block;
+            clear: both;
+			float:right;
+        }
+
+        .item:hover {
+            background-color: #6282c6;
+        }
+
+        .itemname {
+            padding-left: 0.5vh;
+            font-size: 1.8vh;
+            font-weight: 600;
+            display: inline-block;
+            vertical-align: middle;
+            float: left
+        }
+
+        .itembar {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            margin-right: 0.3vw;
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .itemmaxcount, .itemmaxcountspan {
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+            font-size: 1.8vh;
+        }
+
+        .itemcheckbox {
+            margin-left: 0.5vw;
+            display: inline-block;
+            vertical-align: middle;
+            float: right;
+        }
+
+        .plus, .minus {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 2.1vh;
+            margin-left: 0.3vw;
+            color: #262A32;
+            float: right;
+        }
+
+        .dropix {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 2.1vh;
+            margin-left: 0.3vw;
+            color: #262A32;
+            float: right;
+        }
+		
+		.i_name {
+			font-size: 10px;
+			padding-bottom: 10px;
+			padding-right: 6px;
+			align-self: flex-end;
+			line-height: 11px;
+		}
+		
+		.i_name {
+			width: 87px;
+		}		
+
+        .use {
+            <!--display: inline-block;
+            vertical-align: middle;
+            font-size: 2.1vh;
+            margin-left: 0.3vw;
+            color: #262A32;
+            float: left;-->
+			 display: inline-block;
+            vertical-align: middle;
+            font-size: 2.1vh;
+            margin-left: 0.3vw;
+            color: #262A32;
+            float: right;
+        }
+
+        .invicon:hover, .sorticon:hover, .sortcraftingicon:hover {
+            color: #1c67c6;
+        }
+
+        .invicon:active, .sorticon:active, .sortcraftingicon:active, .dropbackpack:active, .pickupbackpack:active, .craftingitem:active {
+            color: #fff;
+        }
+
+        .count {
+            text-align: center;
+            font-size: 2.1vh;
+            padding: 0.2vh 0.2vw;
+            width: 2.4vw;
+            height: 2vh;
+            outline: none;
+            border: 0.1vh solid #262A32;
+            background-color: transparent;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.3vw;
+            float: right;
+        }
+
+        .itembar input[type=checkbox] {
+            float: right;
+            margin-left: 0.3vw;
+        }
+
+        ul, li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1c67c6;
+            border-radius: 2px;
+        }
+
+        .sortbar {
+            position: absolute;
+            top: 0.5vh;
+            left: -4vw;
+            width: 3vw;
+            text-align: center;
+        }
+
+        .sorticon {
+            position: relative;
+            padding: 0.5vw 0;
+            top: 1vh;
+            left: 0.5vw;
+            background-color: rgba(38, 42, 50, 0.9);
+            margin-bottom: 1vh;
+            color: white;
+            font-size: 2vw;
+        }
+
+        .targetbar {
+            float: left;
+            height: 100%;
+            width: 4.5vw;
+            text-align: center;
+            overflow-y: scroll;
+            display: none;
+        }
+
+        .targeticon {
+            clear: both;
+            position: relative;
+            padding: 0.5vw 0;
+            background-color: rgba(38, 42, 50, 0.9);
+            margin-bottom: 1vh;
+            margin-left: 0.5vw;
+            color: white;
+            font-size: 2vw;
+        }
+
+        .targetdistance {
+            position: absolute;
+            bottom: 1.1vh;
+            right: 0;
+            left: 0;
+            font-size: 0.9vw;
+            font-weight: 600;
+            color: #1c67c6;
+        }
+
+        .targeticon:hover {
+            color: #1c67c6;
+        }
+
+        .targeticon:hover > .targetdistance {
+            color: white;
+        }
+
+        input[type=checkbox] {
+            height: 2vh;
+            width: 2vh;
+        }
+
+        .DragAllMarked {
+            position: absolute;
+            left: 0.5vw;
+            bottom: 1.2vh;
+            width: 95.5%;
+            max-width: 24vw;
+            text-align: center;
+            color: white;
+            font-size: 2.3vh;
+            background-color: #1c67c6;
+            padding: 0.5vh 0;
+            height: 2.3vh;
+            z-index: 5;
+        }
+
+        .DragAllMarked span {
+            position: relative;
+            bottom: 0.3vh;
+        }
+
+        .markall {
+            position: absolute;
+            right: 0.2vw;
+            top: 1.4vh;
+            color: white;
+        }
+
+        .markall input {
+            position: relative;
+            top: 0.2vh
+        }
+
+        .bagpackdraggable {
+            color: white;
+            position: absolute;
+            top: 1.2vh;
+            left: 0.5vw;
+            font-size: 2.8vh;
+            z-index: 2;
+        }
+
+        .bagpackdroppable {
+            color: white;
+            position: absolute;
+            top: 0.5vh;
+            left: 0.2vw;
+            font-size: 4vh;
+            display: none;
+        }
+
+        .dropbackpack {
+            color: white;
+            position: absolute;
+            top: 1.2vh;
+            left: 3vw;
+            font-size: 2.8vh;
+            z-index: 2;
+        }
+
+        .pickupbackpack {
+            color: white;
+            position: absolute;
+            top: 1.2vh;
+            left: 0.5vw;
+            font-size: 2.8vh;
+            z-index: 2;
+            display: none;
+        }
+
+        .dropbackpack:hover, .bagpackdraggable:hover, .pickupbackpack:hover {
+            color: #1c67c6;
+        }
+
+        .toolscontainer {
+            position: absolute;
+            top: 5vh;
+            right: 0;
+        }
+
+        .primary, .secondary, .tool, .melee {
+            position: relative;
+            font-size: 2.1vw;
+            width: 8vw;
+            background-color: #616E7F;
+            text-align: center;
+            color: #262A32;
+            margin: 0.5vw 0.5vw;
+        }
+
+        .equipmenttitle {
+            font-size: 1.5vw;
+        }
+
+        .ammonation {
+            position: absolute;
+            right: 0.2vw;
+            bottom: 0;
+            font-size: 0.8vw;
+        }
+
+        .clothingcontainer {
+            position: absolute;
+            top: 5vh;
+            left: 0;
+            height: 100%;
+        }
+
+        .clothing {
+            position: relative;
+            padding: 0.5vh 0.3vw;
+            font-size: 1vw;
+            width: 8vw;
+            background-color: #616E7F;
+            color: #262A32;
+            margin: 0.5vw;
+        }
+
+        .clothing:hover {
+            color: white;
+        }
+
+        .switchinventoryright {
+            position: absolute;
+            right: 0;
+            bottom: -5vh;
+            font-size: 2.3vh;
+            background-color: rgba(38, 42, 50, 0.9);
+            box-shadow: 0 0 5px 0 rgba(38, 42, 50, 0.9);
+            color: white;
+            padding: 0.5vw;
+        }
+
+        .switchinventoryleft {
+            position: absolute;
+            left: 0;
+            bottom: -5vh;
+            font-size: 2.3vh;
+            background-color: rgba(38, 42, 50, 0.9);
+            box-shadow: 0 0 5px 0 rgba(38, 42, 50, 0.9);
+            color: white;
+            padding: 0.5vw;
+        }
+
+        .switchinventoryleft:hover, .switchinventoryright:hover {
+            color: #1c67c6;
+        }
+
+        .equiped {
+            color: white;
+        }
+
+        .equiped:hover {
+            color: #1c67c6;
+        }
+
+        .switchClothes {
+            position: absolute;
+            bottom: 1.5vh;
+            right: 0;
+            font-size: 2.1vw;
+            width: 8vw;
+            background-color: #616E7F;
+            text-align: center;
+            color: #262A32;
+            margin: 0.5vw 0.5vw;
+        }
+
+        .switchClothes:hover {
+            color: white;
+        }
+
+        .craftingcontainer {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            height: 80%;
+            display: none;
+        }
+
+        .craftinglist {
+            position: relative;
+            height: 100%;
+            width: 15vw;
+            background-color: rgba(38, 42, 50, 0.9);
+            box-shadow: 0 0 5px 0 rgba(38, 42, 50, 0.9);
+            float: left
+        }
+
+        .crafting {
+            position: relative;
+            margin-left: 1vw;
+            float: right;
+            height: 100%;
+            width: 30vw;
+            background-color: rgba(38, 42, 50, 0.9);
+            box-shadow: 0 0 5px 0 rgba(38, 42, 50, 0.9);
+            display: none;
+        }
+
+        .sortcraftingbar {
+            position: absolute;
+            top: 10%;
+            left: -4vw;
+            width: 3vw;
+            text-align: center;
+        }
+
+        .sortcraftingicon {
+            position: relative;
+            padding: 0.5vw 0;
+            top: 1vh;
+            left: 0.5vw;
+            background-color: rgba(38, 42, 50, 0.9);
+            margin-bottom: 1vh;
+            color: white;
+            font-size: 1vw;
+        }
+
+        #progressbar {
+            position: absolute;
+            top: 6vh;
+            left: 5%;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.45);;
+            height: 2vh;
+            display: none;
+        }
+
+        #progressbarfill {
+            background-color: #1c67c6;
+            height: 100%;
+            width: 50%;
+        }
+
+        #needed_box {
+            position: absolute;
+            border: 1px solid #FDB900;
+            height: 200px;
+            width: 400px;
+            top: 110px;
+            left: 50px;
+            text-align: left;
+        }
+
+        #crafting_btn {
+            position: absolute;
+            background-color: #FDB900;
+            color: black;
+            font-size: 1.8vw;
+            bottom: 2vh;
+            right: 5%;
+            box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.9);
+            padding: 0.5vw;
+        }
+
+        #crafting_btn:enabled:hover {
+            background-color: greenyellow;
+        }
+
+        #needed_box {
+            position: absolute;
+            border: 0.1vh solid #1c67c6;
+            height: 60%;
+            width: 90%;
+            top: 10vh;
+            left: 5%;
+            text-align: left;
+        }
+
+        #neededitems {
+            font-size: 1.3vw;
+            margin: 0.5vw;
+            color: white;
+        }
+
+        #count_box {
+            position: absolute;
+            width: 8vw;
+            bottom: 2vh;
+            height: 2.5vh;
+            left: 40%;
+        }
+
+        .craftingcount {
+            color: white;
+            font-size: 1.5vw;
+            position: relative;
+            top: 0.2vh;
+        }
+
+        .craftingcount:hover {
+            color: #FDB900;
+        }
+
+        #craftingcount_input {
+            width: 2.5vw;
+            font-size: 1.2vw;
+            text-align: center;
+            outline: none;
+        }
+
+        #craftinglist {
+            position: relative;
+            margin-left: 0.2vw;
+            margin-top: 0.5vh;
+            width: 95%;
+            height: 41vh;
+            border: 0.2vh solid #616E7F;
+            overflow-y: scroll;
+        }
+
+        .craftingitem {
+            background-color: #616E7F;
+            position: relative;
+            padding: 0.5vh 0;
+            width: 100%;
+            max-width: 23.5vw;
+            margin: 0.1vh 0.1vw;
+            display: inline-block;
+            clear: both;
+        }
+
+        .craftingitem:hover {
+            background-color: #6282c6;
+        }
+
+        .money {
+            position: absolute;
+            top: 1.7vh;
+            left: 2.5vw;
+            color: greenyellow;
+            border: 0.2vh solid #616E7F;
+        }
+
+        .money input {
+            color: greenyellow;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+            width: 4vw;
+            text-align: right;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <!--<div class="sortbar">
+        <div class="sorticon" data="0"><i class="fa fa-briefcase"></i></div>
+        <div class="sorticon" data="1"><i class="fa fa-utensils"></i></div>
+        <div class="sorticon" data="2"><i class="fa fa-briefcase-medical"></i></div>
+        <div class="sorticon" data="3"><i class="fa fa-industry"></i></div>
+        <div class="sorticon" data="4"><i class="fa fa-hand-lizard"></i></div>
+        <div class="sorticon" data="5"><i class="fa fa-capsules"></i></div>
+        <div class="sorticon" data="6"><i class="fa fa-cocktail"></i></div>
+        <div class="sorticon" data="7"><i class="fa fa-cannabis "></i></div>
+    </div>-->
+    <div class="inventory player droppable" inventoryType="1">
+        <div class="title">Inventar</div>
+        <!--<div class="markall active">Tudo&nbsp;<input type="checkbox"></div>-->
+        <div class="bagpackdroppable"><i class="fa fa-expand"></i></div>
+        <div class="stats"><span class="statsfiller"></span><span class="actual">0</span><span>&nbsp;/&nbsp;</span><span class="max">0</span></div>
+        <ul class="itemcontainer"></ul>
+        <!--<div class="switchinventoryright" id="crafting">Craft&nbsp;<i class="fa fa-arrow-right"></i></div>-->
+    </div>
+
+
+    <div class="container">
+        <div class="inventory backpack droppable" inventoryType="2">
+            <div class="title">Dein Rucksack</div>
+            <!--<div class="markall active">Alle&nbsp;<input type="checkbox"></div>-->
+
+            <div class="stats"><span class="statsfiller"></span><span class="actual">0</span><span>&nbsp;/&nbsp;</span><span class="max">0</span></div>
+            <ul class="itemcontainer"></ul>
+        </div>
+        <div class="inventory storage droppable" inventoryType="0">
+            <div class="title">Lager</div>
+            <!--<div class="markall active">Alle&nbsp;<input type="checkbox"></div>-->
+            <div class="pickupbackpack"><i class="fa fa-upload"></i></div>
+            <div class="bagpackdroppable"><i class="fa fa-expand"></i></div>
+            <div class="stats"><span class="statsfiller"></span><span class="actual">0</span><span>&nbsp;/&nbsp;</span><span class="max">0</span></div>
+            <ul class="itemcontainer"></ul>
+        </div>
+        <div class="inventory target droppable" inventoryType="1">
+            <div class="title">Ziel</div>
+            <div class="bagpackdroppable"><i class="fa fa-expand"></i></div>
+            <div class="stats"><span class="statsfiller"></span><span class="actual">0</span><span>&nbsp;/&nbsp;</span><span class="max">0</span></div>
+            <ul class="itemcontainer"></ul>
+        </div>
+        <ul class="targetbar">
+        </ul>
+    </div>
+    <div class="craftingcontainer">
+        <div class="sortcraftingbar">
+            <div class="sortcraftingicon" data="0"><i class="fa fa-briefcase"></i></div>
+            <div class="sortcraftingicon" data="1"><i class="fa fa-utensils"></i></div>
+            <div class="sortcraftingicon" data="2"><i class="fa fa-industry"></i></div>
+            <div class="sortcraftingicon" data="3"><i class="fa fa-cocktail"></i></div>
+            <div class="sortcraftingicon" data="4"><i class="fa fa-cannabis "></i></div>
+        </div>
+        <div class="craftinglist">
+            <div class="title">Rezepte</div>
+            <ul id="craftinglist">
+            </ul>
+        </div>
+        <div class="crafting">
+            <div class="title producttitle">Itemname</div>
+            <div id="progressbar">
+                <div id="progressbarfill"></div>
+            </div>
+            <div id="needed_box">
+                <div class="title"> Benötigt:</div>
+                <ul id="neededitems">
+                    <!--<li><span>Item 1</span><span style="float:right">Anzahl: 1</span></li>
+                    <li><span>Item 1</span><span style="float:right">Anzahl: 1</span></li>
+                    <li><span>Item 1</span><span style="float:right">Anzahl: 1</span></li>
+                    <li><span>Item 1</span><span style="float:right">Anzahl: 1</span></li>
+                    <li><span>Item 1</span><span style="float:right">Anzahl: 1</span>-->
+                </ul>
+                <div style="clear: both"></div>
+                <div id="count_box">
+                    <span class="craftingcount " id="craftingdown"><i class="fa fa-minus-square"></i></span>
+                    <input id="craftingcount_input" value="1">
+                    <span class="craftingcount " id="craftingup"><i class="fa fa-plus-square"></i></span>
+                </div>
+            </div>
+            <button id="crafting_btn">Herstellen</button>
+        </div>
+        <div class="switchinventoryleft" id="backtoinventory"><i class="fa fa-arrow-left"></i>&nbsp;Deine Tasche</div>
+    </div>
+</div>
+
+<script>
+	// Keys listener.
+$(document).keydown(function(e) {
+
+	switch (e.which) {
+		// Show input.
+		case 27: {
+			mp.trigger("Destroy_Character_Menu");
+			break;
+		}
+		case 73: {
+			mp.trigger("Destroy_Character_Menu");
+			break;
+		}
+	}
+});
+
+
+    $(function () {
+        moneyDragNDrop();
+    });
+    let inventory = [],
+        backpack = [],
+        storageType = 0,
+        storage = [],
+        targets = [],
+        active = false,
+        craftingreceipes = [],
+        maxcraft = 0,
+        progress = 0,
+        timer = null,
+        type = 0,
+        duty = false,
+        limit = 0,
+        weight = 0,
+        veh_limit = 0,
+        veh_weight = 0;
+
+    function updateBrowser(arrayInventory, arrayBackpack, szweight, szlimit, szveh_weight, szveh_limit) {
+        if (active) {
+            $('.inventory').hide();
+            $('.itemcontainer').empty();
+            $('.markall').find('input[type=checkbox]').prop('checked', false);
+            active = false;
+
+            if (timer !== null) clearInterval(timer);
+            timer = null;
+            inventory = [];
+            backpack = [];
+            storageType = 0;
+            storage = [];
+            targets = [];
+
+            $('.DragAllMarked').remove();
+            $('.money').remove();
+        }
+		
+		limit = szlimit;
+		weight = szweight;	
+		veh_limit = szveh_limit;
+		veh_weight = szveh_weight;
+        active = false;
+        craftingreceipes = [];
+        maxcraft = 0;
+        progress = 0;
+        type = 0;
+
+        $('.craftingcontainer').hide();
+        $('.equipment').hide();
+        $('.sortbar').show();
+        $('.targetbar').show();
+        $('.equipment').hide();
+        $('.container').show();
+        $('.DragAllMarked').remove();
+        $('.bagpackdraggable').remove();
+        $('.player')
+            //.append("<div class=\"DragAllMarked draggable active\"><span>Todos Marcado</span></div>")
+            .append("<div class=\"money\"><span>111</span><i class=\"fas fa-money-bill-alt\"></i>&nbsp</div>");
+        <!--$('.backpack').append("<div class=\"DragAllMarked draggable active\"><span>Todos Marcado</span></div><div class=\"bagpackdraggable\"><i class=\"fa fa-briefcase\"></i></div>");-->
+        $('.storage')
+            //.append("<div class=\"DragAllMarked draggable active\"><span>Todos Marcado</span></div>")
+            .append("<div class=\"money\"><input type=\"text\" value=\"\">&nbsp<i class=\"fas fa-money-bill-alt\"></i>&nbsp</div>");
+
+        $('.target').append("<div class=\"money\"><input type=\"text\" value=\"XXX\">&nbsp<i class=\"fas fa-money-bill-alt\"></i>&nbsp</div>");
+
+		
+        inventory = arrayInventory;
+
+        fillInventory($('.player'), inventory);
+        //$('.player .money input').val(szmoney);
+		
+		$('.money').remove();
+		
+        backpack = arrayBackpack;
+        if (backpack != "null") {
+			//alert('called here');
+            $('.pickupbackpack').hide();
+            active = true;
+            fillVehicleInventory($('.backpack'), backpack);
+
+            /*$('.bagpackdraggable').unbind().draggable({
+                helper: function () {
+                    return clone = $(this).clone()
+                        .css('color', '#1c67c6')
+                        .appendTo('body');
+                },
+                start: function () {
+                    $('.bagpackdroppable').fadeIn();
+                },
+                stop: function () {
+                    $('.bagpackdroppable').fadeOut();
+                }
+            });
+            $('.bagpackdroppable').unbind().droppable({
+                accept: '.bagpackdraggable',
+                tolerance: 'pointer',
+                drop: function (e, ui) {
+                    const draggable = ui.draggable;
+                    const senderId = $(draggable).parent().attr('inventoryId');
+                    const targetId = $(this).parent().attr('inventoryId');
+                    const target = $(this).parent().attr('inventoryType');
+                    if (senderId === null || senderId === undefined) return;
+                    mp.trigger("BrowserManager:Trigger", "InventoryService:GiveBackpackToInventory", senderId, parseInt(target), targetId);
+                }
+            });*/
+        }
+
+		active = true;
+		
+        if (active) {
+            $('.active').show();
+            dragNDrop();
+        }
+        else {
+            $('.active').hide();
+        }
+        update();
+    }
+
+    function fillInventory(element, data) {
+        //const use = element.attr('class').includes('player');
+        //setWeight(element, dataSz.ActualWeight, dataSz.MaxWeight);
+		let items = JSON.parse(data);
+		
+		
+		setWeight(element, weight, limit);
+		
+        element.attr('inventoryId', 1);
+
+        element.find('.title').html('Inventar');
+        element.show();
+        
+        if (items != null) {
+            element = element.find('.itemcontainer');
+            element.empty();
+            let list = [];
+            for (let i = 0; i < items.length; i++) {
+                list.push("<li class='item draggable' itemId='" + items[i].type + "' databaseId='" + items[i].type + "'><span class='itemname'>" + items[i].name + "</span><div class='itembar' itemId='" + items[i].type + "' databaseId='" + items[i].type + "'><span class='invicon plus active'><i class='fa fa-plus-square '></i></span><input type='text' maxlength='3' class='count active' value='0'><span class='invicon minus active'><i class='fa fa-minus-square '></i></span><span  class='itemmaxcountspan'>)</span><span class='itemmaxcount'>" + items[i].amount + "</span><span  class='itemmaxcountspan'>(</span> </div></li>");
+			}
+            if (list != null) element.append(list.join(""));
+        }
+    }
+
+    function fillVehicleInventory(element, data) {
+        //const use = element.attr('class').includes('player');
+        //setWeight(element, dataSz.ActualWeight, dataSz.MaxWeight);
+		let items = JSON.parse(data);
+		
+		
+		setWeight(element, veh_weight, veh_limit);
+		
+        element.attr('inventoryId', 2);
+
+        element.find('.title').html('Kofferraum');
+        element.show();
+        
+        if (items != null) 
+		{
+            element = element.find('.itemcontainer');
+            element.empty();
+            let list = [];
+            for (let i = 0; i < items.length; i++) {
+				list.push("<li class='item draggable' itemId='" + items[i].type + "' databaseId='" + items[i].type + "'><span class='itemname'>" + items[i].name + "</span><div class='itembar' itemId='" + items[i].type + "' databaseId='" + items[i].type + "'><span class='invicon plus active'><i class='fa fa-plus-square '></i></span><input type='text' maxlength='3' class='count active' value='0'><span class='invicon minus active'><i class='fa fa-minus-square '></i></span><span  class='itemmaxcountspan'>)</span><span class='itemmaxcount'>" + items[i].amount + "</span><span  class='itemmaxcountspan'>(</span> </div></li>");
+			}
+            if (list != null) element.append(list.join(""));
+        }
+    }
+	
+    function setWeight(element, actual, max) {
+        let size = actual / max * 100;
+        if (size > 100) size = 100;
+        element.find('.statsfiller').css('width', max == 0 ? 0 + "%" : size + "%");
+        element.find('.actual').html(actual);
+        element.find('.max').html(max);
+
+        if (actual == max) {
+            element.find('.stats')
+                .css('color', 'red')
+                .css('font-weight', '600');
+        }
+        else {
+            element.find('.stats')
+                .css('color', 'white')
+                .css('font-weight', '500');
+        }
+    }
+
+    function update() {
+        $('.money')
+            .unbind()
+            .draggable({
+                helper: function () {
+                    if ($(this).children('input').val() === "XXX") return;
+                    return $(this).clone()
+                        .css('background-color', '#1c67c6')
+                        .appendTo('body')
+                }
+            })
+            .droppable({
+                tolerance: 'pointer',
+                accept: '.money',
+                drop: function (e, ui) {
+
+                    var amount = ui.draggable.children('input').val();
+                    if (amount !== "") {
+                        var sender = ui.draggable.parent();
+                        var senderId = sender.attr('inventoryId');
+                        var senderType = sender.attr('inventoryType');
+
+                        var target = $(this).parent();
+                        var targetId = target.attr('inventoryId');
+                        var targetType = target.attr('inventoryType');
+
+                        mp.trigger("BrowserManager:Trigger", "InventoryService:GiveMoney", parseInt(senderType), senderId, parseInt(targetType), targetId, amount);
+                    }
+                }
+            });
+        $('.money input')
+            .unbind()
+            .click(function () {
+                $(this).select();
+            });
+
+        $('.plus').unbind().click(function () {
+            const element = $(this).parent().find('.count');
+            const maxitems = parseInt($(this).parent().find('.itemmaxcount').html());
+            let value = parseInt(element.val());
+
+            value += 1;
+
+            if (value > maxitems) value = 0;
+            element.val(value);
+
+        });
+        $('.minus').unbind().click(function () {
+            const element = $(this).parent().find('.count');
+            const maxitems = parseInt($(this).parent().find('.itemmaxcount').html());
+            let value = parseInt(element.val());
+
+            value -= 1;
+            if (value < 0) value = maxitems;
+            element.val(value);
+        });
+
+        $('.markall').unbind().click(function () {
+            const element = $(this).parent();
+            const checked = $(this).find('input[type=checkbox]').prop('checked');
+
+            $(element).find('.itemcontainer').find('li').each(function () {
+                $(this).find('input[type=checkbox]').prop('checked', checked);
+            });
+        });
+
+        $('.use').unbind().click(function () {
+            let element = $(this).parent();
+            const itemId = element.attr('itemId');
+            const databaseId = element.attr('databaseId');
+            element = element.parent().parent();
+            const sender = element.attr('inventoryType');
+
+            const senderId = element.attr('inventoryId');
+			
+			//alert("ClientUseItemHandler: "+sender+", "+senderId+", "+itemId+", "+databaseId+"");
+			const element_stack = $(this).parent().find('.count');
+			if (!$.isNumeric(element_stack.val())) return;
+            let value = parseInt(element_stack.val());
+
+
+			mp.trigger("Client_ItemAction", itemId, 0, value);
+			
+            //mp.trigger('BrowserManager:Trigger', 'InventoryService:ClientUseItemHandler', parseInt(sender), senderId, itemId, databaseId);
+        });
+		
+		$('.dropix').unbind().click(function () {
+            let element = $(this).parent();
+            const itemId = element.attr('itemId');
+            const databaseId = element.attr('databaseId');
+            element = element.parent().parent();
+            const sender = element.attr('inventoryType');
+
+            const senderId = element.attr('inventoryId');
+			
+			
+			const element_stack = $(this).parent().find('.count');
+			if (!$.isNumeric(element_stack.val())) return;
+            let value = parseInt(element_stack.val());
+
+			
+			//alert("dropix: "+sender+", "+senderId+", "+itemId+", "+databaseId+" - cout: "+value+"");
+			//alert("dropix");
+			mp.trigger("Client_ItemAction_Drop", itemId, value);
+			
+            //mp.trigger('BrowserManager:Trigger', 'InventoryService:ClientUseItemHandler', parseInt(sender), senderId, itemId, databaseId);
+        });
+		
+        $('.count').unbind().click(function () {
+            $(this).val("");
+        });
+        $('.sorticon').unbind().click(function () {
+            let data = parseInt($(this).attr('data'));
+
+            let sortitems;
+            switch (data) {
+                case 0:
+                    sortitems = inventory.Items;
+                    break;
+                case 1:
+                    sortitems = inventory.Items.filter(x => x.ItemType > 0 && x.ItemType < 3);
+                    break;
+                case 2:
+                    sortitems = inventory.Items.filter(x => x.ItemType > 2 && x.ItemType < 5);
+                    break;
+                case 3:
+                    sortitems = inventory.Items.filter(x => x.ItemType > 6 && x.ItemType < 9);
+                    break;
+                case 4:
+                    sortitems = inventory.Items.filter(x => x.ItemType > 4 && x.ItemType < 7);
+                    break;
+                case 5:
+                    sortitems = inventory.Items.filter(x => x.ItemType == 10);
+                    break;
+                case 6:
+                    sortitems = inventory.Items.filter(x => x.ItemType == 9);
+                    break;
+                case 7:
+                    sortitems = inventory.Items.filter(x => x.ItemType == 11);
+                    break;
+            }
+            if (sortitems.length > 0) {
+                let element = $('.player');
+                element = element.find('.itemcontainer');
+                element.empty();
+
+                let list = [];
+                for (let i = 0; i < sortitems.length; i++) {
+
+                    list.push("<li class='item draggable' itemId='" + sortitems[i].ItemId + "' databaseId='" + sortitems[i].DatabaseId + "'>" + ((sortitems[i].Useable == false) ? "<span></span>" : "<span class='invicon use'><i class='fa fa-hand-rock'></i></span>") + "<span class='itemname'>" + sortitems[i].Name + "</span><div class='itembar'><input type='checkbox' class='active'><span class='invicon plus active'><i class='fa fa-plus-square '></i></span><input type='text' maxlength='3' class='count active' value='0'><span class='invicon minus active'><i class='fa fa-minus-square '></i></span><span  class='itemmaxcountspan'>)</span><span class='itemmaxcount'>" + sortitems[i].Stack + "</span><span  class='itemmaxcountspan'>(</span></div></li>");
+                }
+                if (list != null) element.append(list.join(""));
+                if (!active) {
+                    $('.active').hide();
+                }
+                else {
+                    $('.active').show();
+                    dragNDrop();
+                }
+
+                $('.use').unbind().click(function () {
+                    let element = $(this).parent();
+                    const itemId = element.attr('itemId');
+                    const databaseId = element.attr('databaseId');
+                    element = element.parent().parent();
+                    const sender = element.attr('inventoryType');
+
+                    const senderId = element.attr('inventoryId');
+
+					alert(".use "+sender+" - "+senderId+" "+itemId+" "+databaseId+"");
+                    mp.trigger('BrowserManager:Trigger', 'InventoryService:ClientUseItemHandler', parseInt(sender), senderId, itemId, databaseId);
+                });
+            }
+        });
+        $('.dropbackpack').unbind().click(function () {
+            const senderId = $(this).parent().attr('inventoryId');
+            mp.trigger("BrowserManager:Trigger", "InventoryService:DropBackpack", senderId);
+        });
+        $('.targeticon').unbind()
+            .click(function () {
+                const value = $(this).attr('data');
+
+                const target = targets[value];
+                if (target == null) return;
+
+                $('.compartment').hide();
+                $('.vehicle').hide();
+                $('.storage').hide();
+                $('.trash').hide();
+
+                let element = $('.target');
+                element.show();
+                setWeight(element, target.ActualWeight, target.MaxWeight);
+                element.attr('inventoryId', target.TargetId);
+                element.find('.title').html("Dein Ziel");
+
+                if (!active) {
+                    active = true;
+                    $('.active').show();
+                    dragNDrop();
+                }
+            })
+            .mouseenter(function () {
+                const value = $(this).attr('data');
+                const target = targets[value];
+
+                mp.trigger("BrowserManager:CreateMarker", target.PositionX, target.PositionY, target.PositionZ);
+            })
+            .mouseleave(function () {
+                mp.trigger("MarkerManager:DeleteMarker");
+            });
+        $('.pickupbackpack').unbind().click(function () {
+            mp.trigger("BrowserManager:Trigger", "InventoryService:PickupBackpack");
+        });
+        $('.switchClothes').unbind().click(function () {
+            mp.trigger("BrowserManager:Trigger", "InventoryService:SwitchClothing");
+
+            $('#clothset').html($('#clothset').html() === "1" ? "2" : "1");
+        });
+        $('.equiped').unbind().click(function () {
+            $(this)
+                .unbind()
+                .toggleClass('equiped');
+
+            mp.trigger("BrowserManager:Trigger", "InventoryService:ToggleWeapon", parseInt($(this).attr('data')));
+        });
+    }
+
+    $(function () {
+        $('.equiped').unbind().click(function () {
+            const data = $(this).attr('data');
+
+            $(this)
+                .unbind()
+                .toggleClass('equiped');
+
+            mp.trigger("BrowserManager:Trigger", "InventoryService:UnequipEquipment", parseInt(data));
+        });
+        $('.clothing').unbind().click(function () {
+            const data = $(this).attr('data');
+
+            mp.trigger("InventoryService:ToggleClothing", parseInt(data));
+        });
+        $('#equipment').unbind().click(function () {
+            $('.player').fadeOut();
+            $('.sortbar').fadeOut();
+            $('.targetbar').fadeOut();
+            $('.equipment').fadeIn();
+            $('.container').hide();
+        });
+        $('#inventory').unbind().click(function () {
+            $('.equipment').fadeOut();
+            $('.player').fadeIn();
+            $('.sortbar').fadeIn();
+            $('.targetbar').fadeIn();
+            $('.container').show();
+        });
+
+        $('#crafting').unbind().click(function () {
+            mp.trigger("CraftingManager:Handle");
+        });
+        $('#backtoinventory').unbind().click(function () {
+            $('.crafting').fadeOut();
+            $('.craftingcontainer').fadeOut();
+            $('.player').fadeIn();
+            $('.sortbar').fadeIn();
+            $('.targetbar').fadeIn();
+            $('.container').show();
+        });
+
+        $('#craftingup').unbind().click(function () {
+            if (progress > 0) return;
+            const element = $(this).parent().find('#craftingcount_input');
+            let value = parseInt(element.val());
+
+            value += 1;
+            if (value > maxcraft) value = maxcraft;
+            element.val(value);
+
+        });
+        $('#craftingdown').unbind().click(function () {
+            if (progress > 0) return;
+            const element = $(this).parent().find('#craftingcount_input');
+            let value = parseInt(element.val());
+
+            value -= 1;
+            if (value < 0) value = 0;
+            element.val(value);
+        });
+        $('#craftingcount_input').unbind().click(function () {
+            $(this).val("");
+        });
+        $('#crafting_btn').unbind().click(function () {
+            let time = parseInt($(this).attr('data'));
+            if (time === 0) return;
+
+            const stack = $('#craftingcount_input').val();
+            if (!$.isNumeric(stack) || stack == 0) return;
+            time = (time * stack) / 100;
+
+            if (timer !== null) clearInterval(timer);
+
+            $('#progressbar').show();
+            $('#craftingcount_input').prop('disabled', true);
+            $('#progressbarfill').width('0%');
+            progress = 0;
+            timer = setInterval(function () {
+                updateProgress()
+            }, time)
+        });
+
+
+        $('.sortcraftingicon').unbind().click(function () {
+            let data = parseInt($(this).attr('data'));
+
+            let sortitems;
+            switch (data) {
+                case 0:
+                    sortitems = craftingreceipes;
+                    break;
+                case 1:
+                    sortitems = craftingreceipes.filter(x => x.CraftingRecipeType == 1);
+                    break;
+                case 2:
+                    sortitems = craftingreceipes.filter(x => x.CraftingRecipeType == 2);
+                    break;
+                case 3:
+                    sortitems = craftingreceipes.filter(x => x.CraftingRecipeType == 3);
+                    break;
+                case 4:
+                    sortitems = craftingreceipes.filter(x => x.CraftingRecipeType == 4);
+                    break;
+            }
+            if (sortitems.length > 0) {
+                let items = [];
+                for (let i = 0; i < sortitems.length; i++) {
+                    items.push("<li class='craftingitem' data='" + i + "'><span class='itemname'>" + sortitems[i].Item.ProductName + "</span></li>");
+                }
+                $('#craftinglist')
+                    .empty()
+                    .append(items.join(""));
+
+                updateCrafting();
+            }
+        });
+    });
+
+    function updateProgress() {
+
+        progress++;
+        if (progress >= 100) {
+            clearInterval(timer);
+            $('#progressbar').hide();
+            const id = $('.producttitle').attr('data');
+            const stack = $('#craftingcount_input').val();
+            mp.trigger('BrowserManager:Trigger', 'CraftingService:CraftingDone', id, stack);
+            progress = 0;
+            $('#craftingcount_input').prop('disabled', false);
+        }
+        else {
+            $('#progressbarfill').width(progress + "%");
+        }
+    }
+
+
+    function setCraftingReceipes(data) {
+        $('.player').fadeOut();
+        $('.sortbar').fadeOut();
+        $('.targetbar').fadeOut();
+        $('.craftingcontainer').fadeIn();
+        $('.container').hide();
+
+        craftingreceipes = data;
+
+
+        let items = [];
+        for (let i = 0; i < data.length; i++) {
+            items.push("<li class='craftingitem' data='" + i + "'><span class='itemname'>" + data[i].ProductName + "</span></li>");
+        }
+        $('#craftinglist')
+            .empty()
+            .append(items.join(""));
+
+        updateCrafting();
+    }
+
+    function updateCrafting() {
+        $('.craftingitem').click(function () {
+            maxcraft = 99;
+            $('.crafting').show();
+
+            const index = $(this).attr('data');
+            const item = craftingreceipes[index];
+
+            let items = [];
+
+            $('.producttitle').html(item.ProductName)
+                .attr('data', item.Id);
+
+            let craft = false;
+
+            for (let i = 0; i < item.CraftingRecipeNeededItems.length; i++) {
+
+                var neededItem = item.CraftingRecipeNeededItems[i];
+                const find = inventory.Items.find(x => x.ItemId === neededItem.NeededItemId);
+                const stack = parseInt(find === undefined ? 0 : find.Stack);
+                if (stack == 0) craft = true;
+                const neededStack = parseInt(neededItem.NeededItemCount);
+                const available = stack / neededStack;
+                if (available < maxcraft) maxcraft = available;
+
+                items.push("<li><span>" + neededItem.NeededItemName + "</span><span style=\"float:right\">Anzahl: " + stack + "&nbsp;/&nbsp;" + neededStack + "</span></li>")
+            }
+            $('#crafting_btn').attr('disabled', craft);
+            if (!craft) $('#crafting_btn').attr('data', item.ProductTime);
+            $('#neededitems')
+                .empty()
+                .append(items.join(""));
+        });
+    }
+
+    function dragNDrop() {
+        $('.draggable')
+            .unbind()
+            .draggable({
+                helper: function () {
+                    return $(this).clone()
+                        .css('background-color', '#1c67c6')
+                        .appendTo('body')
+                }
+            });
+
+        $('.droppable')
+            .unbind()
+            .droppable({
+                tolerance: 'pointer',
+                accept: '.draggable',
+                drop: function (e, ui) {
+				
+                    const draggable = ui.draggable;
+                    let sender = draggable.parent().parent().attr('inventoryType');
+                    const target = $(this).attr('inventoryType');
+
+                    let many = false;
+
+                    if (sender == undefined) {
+                        many = true;
+                        sender = draggable.parent().attr('inventoryType');
+                    }
+
+                    let senderId = "";
+                    let targetId = $(this).attr('inventoryId');
+
+                    if (many) {
+
+                        let itemlist = [];
+                        const droppable = $(this);
+                        senderId = $(draggable).parent().attr('inventoryId');
+                        $(draggable).parent().find('.itemcontainer').find('li').each(function () {
+                            const element = $(this).find('input[type=checkbox]');
+                            if (element.prop('checked')) {
+                                $(this).detach().css({
+                                    top: 0,
+                                    left: 0
+                                }).appendTo(droppable.find('.itemcontainer'));
+
+                                const itemId = $(this).attr('itemId');
+                                const databaseId = $(this).attr('DatabaseId');
+                                const stack = $(this).find('.count').val();
+                                if (!$.isNumeric(stack)) {
+                                    $(this).find('.count').val(0);
+                                    return;
+                                }
+								alert("called 1 inside drop");
+                                itemlist.push({ItemId: itemId, DatabaseId: databaseId, Stack: stack});
+                            }
+                        });
+
+                        if (senderId === targetId || senderId == null || senderId === undefined) return;
+                        if (itemlist != null && itemlist.length > 0) 
+						{
+							mp.trigger('BrowserManager:Trigger', 'InventoryService:GiveManyItemHandler', parseInt(sender), senderId, parseInt(target), targetId, JSON.stringify(itemlist));
+					
+						}
+					}
+                    else {
+                        senderId = $(draggable).parent().parent().attr('inventoryId');
+                        $(draggable).detach().css({
+                            top: 0,
+                            left: 0
+                        }).appendTo($(this).find('.itemcontainer'));
+                        const stack = draggable.find('.count').val();
+                        if (!$.isNumeric(stack)) {
+                            draggable.find('.count').val(0);
+                            return;
+                        }
+						//alert("called 2 ----       "+parseInt(sender)+", "+senderId+", "+parseInt(target)+", "+targetId+", "+draggable.attr('itemId')+", "+draggable.attr('DatabaseId')+", "+stack+" ");
+                        if (parseInt(sender) === 1)
+						{
+							if(stack === 0) stack = 1;
+							mp.trigger('Storage_Give_Item', draggable.attr('itemId'), stack);
+						}
+						else if (parseInt(sender) === 2)
+						{
+							if(stack === 0) stack = 1;
+							mp.trigger('Storage_Take_Item', draggable.attr('itemId'), stack);
+						}
+						
+						
+						//alert("called 2");
+                        //mp.trigger('BrowserManager:Trigger', 'InventoryService:GiveItemHandler', parseInt(sender), senderId, parseInt(target), targetId, draggable.attr('itemId'), draggable.attr('DatabaseId'), stack)
+							
+					}
+                }
+            });
+    }
+</script>
+</body>
+</html>

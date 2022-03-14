@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'Lato', sans-serif;
+	src: url('/Lato.ttf') format('truetype');
+}
+
+.content-navi {
+	border: 0 none;
+	border-bottom: 1px solid #771a21 !important;
+}
+.content-navi .navi-item.active {
+	background: #ffb320;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+}
+.font-signpainter,
+.table th {
+	font-family: arial;
+	font-size: 16px;
+}
+.content-close.content-body {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*MAX*/
+.content-head .headline.buy:before {
+	content: '\f155	'; /* FontAwesome Unicode */
+	font-family: FontAwesome;
+	padding-top: 0.4em;
+	margin-right: 25px;
+	font-weight: normal;
+	color: #fff;
+	padding: 15px 22px;
+	border-radius: 50px;
+	background: #771a21;
+	-webkit-box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+	-moz-box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+	box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.36);
+}
+img#pF-img {
+	padding-bottom: 0.4em;
+	width: 100%;
+}
+.adress-text {
+	font-family: arial;
+	width: 100%;
+	font-size: 22px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	padding-bottom: 0.4em;
+}
+.biggest,
+.flex-item.pricing {
+	font-family: arial;
+	font-size: 20px;
+}
+.biggest {
+	float: right;
+	color: #da323e;
+}
+.money {
+	color: #da323e;
+}
+.flex-item.pricing {
+	float: left;
+	text-transform: uppercase;
+	color: #dad1d1;
+}
+.flex-container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.buttons button {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #fff;
+	background: #9f262f;
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	font-size: 14pt;
+	cursor: pointer;
+	outline: 0 none;
+	transition: background-color 0.3s ease;
+	width: 65%;
+}
+button.mouse-hover.btn.btn-default.save {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	color: #fff;
+	background: #9f262f;
+	border: 0 none;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	font-size: 14pt;
+	cursor: pointer;
+	outline: 0 none;
+	transition: background-color 0.3s ease;
+	width: 90%;
+}
+.content-close {
+	padding: 0 !important;
+}
+.buttons {
+	padding: 0;
+}
+.content.content-body input[type='text'] {
+	margin-bottom: 30px;
+	background: transparent;
+	border-bottom: 3px solid #771a21 !important;
+	border: 0 none;
+	text-align: left;
+	padding-bottom: 15px;
+	padding-top: 5px;
+	color: #fff;
+}
+p.uname {
+	font-style: italic;
+	font-size: 0.9em;
+}
+.headline {
+	text-transform: uppercase;
+}
+.close,
+#close {
+	font-family: arial;
+}
+.line-red-top {
+	border-top: 1px solid #b71c1c;
+}
